@@ -1,0 +1,2737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>DMS | Dealers Hub</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Alpine JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div
+      class="flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4"
+      style="opacity: 1; transform: none"
+    >
+      <a
+        class="relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+        href="/"
+        ><span class="block sm:hidden"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4 text-neutral-500 dark:text-white"
+          >
+            <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+            <path
+              d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"
+            ></path></svg></span
+        ><span class="hidden sm:block text-sm">Home</span></a
+      ><a
+        class="relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+        href="/about"
+        ><span class="block sm:hidden"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4 text-neutral-500 dark:text-white"
+          >
+            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+            <path
+              d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"
+            ></path></svg></span
+        ><span class="hidden sm:block text-sm">About</span></a
+      ><a
+        class="relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+        href="/contact"
+        ><span class="block sm:hidden"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4 text-neutral-500 dark:text-white"
+          >
+            <path d="M8 9h8"></path>
+            <path d="M8 13h6"></path>
+            <path
+              d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z"
+            ></path></svg></span
+        ><span class="hidden sm:block text-sm">Contact</span></a
+      ><button
+        class="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full"
+      >
+        <span>Get Started</span
+        ><span
+          class="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px"
+        ></span>
+      </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relatve">
+      <!-- Container -->
+      <div
+        class="mx-auto w-full max-w-7xl px-5 pt-36 md:px-10 md:pt-24 lg:pt-48 mb-12 md:mb-16 lg:mb-20"
+      >
+        <!-- Heading Div -->
+        <div
+          class="border border-indigo-600 p-1 w-[21rem] mx-auto rounded-full flex items-center justify-between mb-8"
+        >
+          <span class="font-inter text-xs font-medium text-gray-900 ml-3"
+            >Powering Dealer Success, One Click at a Time</span
+          >
+          <a
+            href="javascript:;"
+            class="w-8 h-8 rounded-full flex justify-center items-center bg-indigo-600"
+          >
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.83398 8.00019L12.9081 8.00019M9.75991 11.778L13.0925 8.44541C13.3023 8.23553 13.4073 8.13059 13.4073 8.00019C13.4073 7.86979 13.3023 7.76485 13.0925 7.55497L9.75991 4.22241"
+                stroke="white"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          class="mx-auto mb-12 w-full max-w-3xl text-center md:mb-16 lg:mb-20"
+        >
+          <h1 class="mb-4 text-4xl font-semibold md:text-6xl">
+            Streamline Dealer Operations with One Powerful, Smart
+            <span
+              class="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/6390526ac2a607693620c97b_Rectangle%2010.svg')] bg-cover bg-center px-4 text-white"
+              >Portal</span
+            >
+          </h1>
+          <p class="mx-auto mb-5 max-w-[528px] text-xl text-[#636262] lg:mb-8">
+            Streamline operations, gain real-time insights, and boost efficiency
+            with our secure, scalable, and user-friendly dealer management
+            solution.
+          </p>
+          <!-- Button Wrap -->
+          <div class="flex justify-center">
+            <a
+              href="#"
+              class="mr-5 inline-block rounded-xl bg-[#1f1f1f] px-8 py-4 text-center font-semibold text-white [box-shadow:rgb(19,_83,_254)_6px_6px] md:mr-6"
+              >Get Started</a
+            >
+            <a
+              href="#"
+              class="flex max-w-full flex-row items-center justify-center rounded-xl border border-solid border-[#1353fe] px-6 py-3 font-semibold text-[#1353fe] [box-shadow:rgb(19,_83,_254)_6px_6px]"
+            >
+              <p class="text-black">See our plans</p>
+              <div class="-me-[6px] rounded-full bg-[#EDEDED] p-2 ml-3">
+                <svg
+                  class="size-4 text-black"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="size-16"
+                  data-sentry-element="svg"
+                  data-sentry-component="ArrowRightIcon"
+                  data-sentry-source-file="ArrowRightIcon.tsx"
+                >
+                  <title>arrow right icon</title>
+                  <path
+                    d="M15.9959 10.0005L3 10.0005"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    vector-effect="non-scaling-stroke"
+                    data-sentry-element="path"
+                    data-sentry-source-file="ArrowRightIcon.tsx"
+                  ></path>
+                  <path
+                    d="M9.73389 16.3179L15.6318 9.99866L9.73389 3.67945"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    vector-effect="non-scaling-stroke"
+                    data-sentry-element="path"
+                    data-sentry-source-file="ArrowRightIcon.tsx"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col justify-center items-center mb-12 md:mb-16 lg:mb-20"
+        >
+          <span
+            class="font-inter text-center text-xs font-medium text-gray-900 ml-3"
+            >Trusted By</span
+          >
+
+          <div class="pt-7">
+            <div class="flex flex-wrap justify-center items-center gap-6 mb-6">
+              <img
+                class="h-14 aspect-3/2 object-contain"
+                src="./assets/images/Integration-Logos/3.AACars.png"
+                alt=""
+              />
+
+              <img
+                class="h-14 aspect-3/2 object-contain"
+                src="./assets/images/Integration-Logos/Mailchimp.png"
+                alt=""
+              />
+
+              <img
+                class="h-14 aspect-3/2 object-contain"
+                src="./assets/images/Integration-Logos/2.Motors.jpg"
+                alt=""
+              />
+
+              <img
+                class="h-14 aspect-3/2 object-contain"
+                src="./assets/images/Integration-Logos/6.Stripe.png"
+                alt=""
+              />
+
+              <img
+                class="h-14 aspect-3/2 object-contain"
+                src="./assets/images/Integration-Logos/1.autotrader.webp"
+                alt=""
+              />
+
+              <img
+                class="h-14 aspect-3/2 object-contain"
+                src="./assets/images/Integration-Logos/4.codeweavers.png"
+                alt=""
+              />
+
+              <img
+                class="h-14 aspect-3/2 object-contain"
+                src="./assets/images/Integration-Logos/5.DVLA.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Image Div -->
+        <div class="relative mx-auto h-[512px]">
+          <img
+            src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915d247ab06a755ee4aaee_magicpattern-KfFmwa7m5VQ-unsplash.jpg"
+            alt=""
+            class="inline-block h-full w-full rounded-xl object-cover sm:rounded-2xl"
+          />
+          <div
+            class="absolute bottom-0 left-4 right-0 top-4 -z-10 h-full w-full rounded-2xl bg-black"
+          ></div>
+        </div>
+      </div>
+      <!-- BG Images -->
+      <img
+        src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63905b9f809b5c8180ce30c5_pattern-1.svg"
+        alt=""
+        class="absolute bottom-0 left-0 right-auto top-auto -z-10 md:bottom-1/2 md:left-0 md:right-auto md:top-auto hidden md:block"
+      />
+      <img
+        src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63905ba1538296b3f50a905e_pattern-2.svg"
+        alt=""
+        class="absolute bottom-auto left-auto right-0 top-0 -z-10 hidden md:block"
+      />
+    </section>
+
+    <!-- About Us -->
+    <section class="py-10 bg-gray-50 dark:bg-indigo-600 sm:py-16 lg:py-24">
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="max-w-xl mx-auto text-center">
+          <h2
+            class="mt-6 text-3xl font-bold leading-tight text-black dark:text-slate-50 sm:text-4xl lg:text-5xl"
+          >
+            Building the Future of Dealer Management
+          </h2>
+        </div>
+
+        <div
+          class="grid items-center grid-cols-1 mt-12 gap-y-10 lg:grid-cols-5 sm:mt-20 gap-x-4"
+        >
+          <div class="space-y-8 lg:pr-16 xl:pr-24 lg:col-span-2 lg:space-y-12">
+            <div class="flex items-start">
+              <svg
+                class="flex-shrink-0 text-green-500 w-9 h-9"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="36"
+                height="36"
+                color="#ffffff"
+                fill="none"
+              >
+                <path
+                  d="M6.18007 15.2964C4.92249 16.0335 1.62521 17.5386 3.63348 19.422C4.6145 20.342 5.7071 21 7.08077 21H14.9192C16.2929 21 17.3855 20.342 18.3665 19.422C20.3748 17.5386 17.0775 16.0335 15.8199 15.2964C12.8709 13.5679 9.12906 13.5679 6.18007 15.2964Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15 7C15 9.20914 13.2091 11 11 11C8.79086 11 7 9.20914 7 7C7 4.79086 8.79086 3 11 3C13.2091 3 15 4.79086 15 7Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M18 5.53846C18 4.68879 18.6716 4 19.5 4C20.3284 4 21 4.68879 21 5.53846C21 5.84473 20.9127 6.1301 20.7623 6.36984C20.3141 7.08436 19.5 7.76572 19.5 8.61538V9"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M19.4998 11H19.5088"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div class="ml-5">
+                <h3 class="text-xl font-semibold text-black dark:text-slate-50">
+                  Who We Are
+                </h3>
+                <p class="mt-3 text-base text-gray-600 dark:text-slate-300">
+                  A team of innovators passionate about empowering dealers
+                  through smart, efficient digital solutions.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <svg
+                class="flex-shrink-0 text-green-500 w-9 h-9"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="36"
+                height="36"
+                color="#ffffff"
+                fill="none"
+              >
+                <circle
+                  cx="18"
+                  cy="5"
+                  r="3"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle
+                  cx="6"
+                  cy="19"
+                  r="3"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 5H8.5C6.567 5 5 6.567 5 8.5C5 10.433 6.567 12 8.5 12H15.5C17.433 12 19 13.567 19 15.5C19 17.433 17.433 19 15.5 19H12"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <div class="ml-5">
+                <h3 class="text-xl font-semibold text-black dark:text-slate-50">
+                  Industry Experience
+                </h3>
+                <p class="mt-3 text-base text-gray-600 dark:text-slate-300">
+                  8 Years of hands-on experience in dealership operations and
+                  software development.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <svg
+                class="flex-shrink-0 text-yellow-500 w-9 h-9"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="36"
+                height="36"
+                color="#ffffff"
+                fill="none"
+              >
+                <path
+                  d="M17 10.8045C17 10.4588 17 10.286 17.052 10.132C17.2032 9.68444 17.6018 9.51076 18.0011 9.32888C18.45 9.12442 18.6744 9.02219 18.8968 9.0042C19.1493 8.98378 19.4022 9.03818 19.618 9.15929C19.9041 9.31984 20.1036 9.62493 20.3079 9.87302C21.2513 11.0188 21.7229 11.5918 21.8955 12.2236C22.0348 12.7334 22.0348 13.2666 21.8955 13.7764C21.6438 14.6979 20.8485 15.4704 20.2598 16.1854C19.9587 16.5511 19.8081 16.734 19.618 16.8407C19.4022 16.9618 19.1493 17.0162 18.8968 16.9958C18.6744 16.9778 18.45 16.8756 18.0011 16.6711C17.6018 16.4892 17.2032 16.3156 17.052 15.868C17 15.714 17 15.5412 17 15.1955V10.8045Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M7 10.8046C7 10.3694 6.98778 9.97821 6.63591 9.6722C6.50793 9.5609 6.33825 9.48361 5.99891 9.32905C5.55001 9.12458 5.32556 9.02235 5.10316 9.00436C4.43591 8.9504 4.07692 9.40581 3.69213 9.87318C2.74875 11.019 2.27706 11.5919 2.10446 12.2237C1.96518 12.7336 1.96518 13.2668 2.10446 13.7766C2.3562 14.6981 3.15152 15.4705 3.74021 16.1856C4.11129 16.6363 4.46577 17.0475 5.10316 16.996C5.32556 16.978 5.55001 16.8757 5.99891 16.6713C6.33825 16.5167 6.50793 16.4394 6.63591 16.3281C6.98778 16.0221 7 15.631 7 15.1957V10.8046Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M5 9C5 5.68629 8.13401 3 12 3C15.866 3 19 5.68629 19 9"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M19 17V17.8C19 19.5673 17.2091 21 15 21H13"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div class="ml-5">
+                <h3 class="text-xl font-semibold text-black dark:text-slate-50">
+                  Customer First
+                </h3>
+                <p class="mt-3 text-base text-gray-600 dark:text-slate-300">
+                  We listen, adapt, and grow with the dealers we serve.
+                  Constantly evolving with new features to keep you ahead of the
+                  curve.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-3 h-full">
+            <img
+              class="w-full rounded-lg shadow-xl h-full object-cover object-left top-1/2"
+              src="./assets/images/dashboard-main.png"
+              alt="Dashboard screenshot"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section
+      id="features"
+      class="max-w-7xl mx-auto px-4 space-y-6 py-8 md:py-12 lg:py-20"
+    >
+      <div class="mx-auto flex flex-col items-center space-y-4 text-center">
+        <h2
+          class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl mb-12 sm:mb-20"
+        >
+          Why We’re the Best Choice for You
+        </h2>
+      </div>
+
+      <div class="grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg
+              class="h-12 w-12"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="36"
+              height="36"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28248 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28248 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2.5 9L21.5 9"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path d="M8 21.5L8 9" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">All-in-One Platform</h3>
+              <p class="text-sm text-muted-foreground">
+                Manage inventory, performance, and operations in one place.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg
+              class="h-12 w-12"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="36"
+              height="36"
+              color="#000000"
+              fill="none"
+            >
+              <circle
+                cx="8.5"
+                cy="10.5"
+                r="1.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <circle
+                cx="14.5"
+                cy="15.5"
+                r="1.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <circle
+                cx="18.5"
+                cy="7.5"
+                r="1.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M15.4341 14.2963L18 9M9.58251 11.5684L13.2038 14.2963M3 19L7.58957 11.8792"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20 21H9C5.70017 21 4.05025 21 3.02513 19.9749C2 18.9497 2 17.2998 2 14V3"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">Real-Time Insights</h3>
+              <p class="text-sm">
+                Make faster, smarter decisions with live data and analytics.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg
+              class="h-12 w-12"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="36"
+              height="36"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M12.5 2.01228C12.3344 2.00413 12.1677 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.1368 21.8906 10.299 21.685 9.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8 15C8.91212 16.2144 10.3643 17 12 17C13.6357 17 15.0879 16.2144 16 15"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10 9.5H8.70711C8.25435 9.5 7.82014 9.67986 7.5 10M14 9.5H15.2929C15.7456 9.5 16.1799 9.67986 16.5 10"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.8881 2.33117C16.8267 1.78287 17.6459 2.00383 18.138 2.35579C18.3398 2.50011 18.4406 2.57227 18.5 2.57227C18.5594 2.57227 18.6602 2.50011 18.862 2.35579C19.3541 2.00383 20.1733 1.78287 21.1119 2.33117C22.3437 3.05077 22.6224 5.42474 19.7812 7.42757C19.24 7.80905 18.9694 7.99979 18.5 7.99979C18.0306 7.99979 17.76 7.80905 17.2188 7.42757C14.3776 5.42474 14.6563 3.05077 15.8881 2.33117Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">User-Friendly Interface</h3>
+              <p class="text-sm text-muted-foreground">
+                No training needed—just intuitive, clean navigation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg
+              class="h-12 w-12"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="36"
+              height="36"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M8 10.1667L12.1232 6.04344C13.2481 4.91858 13.8105 4.35614 14.4312 3.90314C15.7047 2.9737 17.1818 2.36187 18.7395 2.11858C19.4988 2 20.2942 2 21.885 2C21.9681 2 22 2.03812 22 2.11504C22 3.70584 22 4.50125 21.8814 5.26046C21.6381 6.81818 21.0263 8.29527 20.0969 9.56878C19.6439 10.1895 19.0814 10.7519 17.9566 11.8768L13.8333 16"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10.341 8.09838C8.63808 8.09838 6.49778 7.73765 4.9043 8.39769C3.73671 8.88132 2.87754 10.0012 2 10.8787L5.30597 12.2955C6.18208 12.671 5.64651 13.7766 5.50147 14.5018C5.33985 15.3099 5.34886 15.3397 5.93158 15.9224L8.07758 18.0684C8.6603 18.6511 8.69008 18.6602 9.49816 18.4985C10.2234 18.3535 11.329 17.8179 11.7044 18.694L13.1213 22C13.9988 21.1225 15.1187 20.2633 15.6023 19.0957C16.2624 17.5022 15.9016 15.3619 15.9016 13.659"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 20L11 21"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4 12L3 13"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15 4.07996C16.2 4.25996 17.46 4.73996 18.1614 5.45996C19.0576 6.25211 19.68 7.31996 19.92 8.99996"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="square"
+              />
+              <path
+                d="M17.94 6.06006L16.5 7.50006"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">Boost Efficiency</h3>
+              <p class="text-sm text-muted-foreground">
+                Automate daily tasks and reduce manual errors.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg
+              class="h-12 w-12"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="36"
+              height="36"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M14.5405 2V4.48622C14.5405 6.23417 14.5405 7.10814 14.7545 7.94715C14.9685 8.78616 15.3879 9.55654 16.2267 11.0973L17.3633 13.1852C19.5008 17.1115 20.5696 19.0747 19.6928 20.53L19.6792 20.5522C18.7896 22 16.5264 22 12 22C7.47357 22 5.21036 22 4.3208 20.5522L4.30725 20.53C3.43045 19.0747 4.49918 17.1115 6.63666 13.1852L7.7733 11.0973C8.61209 9.55654 9.03149 8.78616 9.24548 7.94715C9.45947 7.10814 9.45947 6.23417 9.45947 4.48622V2"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M9 16.002L9.00868 15.9996"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15 18.002L15.0087 17.9996"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8 2L16 2"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7.5 11.5563C8.5 10.4029 10.0994 11.2343 12 12.3182C14.5 13.7439 16 12.65 16.5 11.6152"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">Scalable Solutions</h3>
+              <p class="text-sm text-muted-foreground">
+                Built to grow with your business, big or small.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg
+              class="h-12 w-12"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="36"
+              height="36"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M8.5 11L9.5 12M9.5 12L10.5 13M9.5 12L10.5 11M9.5 12L8.5 13"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M3.5 11L4.5 12M4.5 12L5.5 13M4.5 12L5.5 11M4.5 12L3.5 13"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M13.5 11L14.5 12M14.5 12L15.5 13M14.5 12L15.5 11M14.5 12L13.5 13"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M18.5 11L19.5 12M19.5 12L20.5 13M19.5 12L20.5 11M19.5 12L18.5 13"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M19.6338 16C17.951 18.8033 15.1069 20.6217 13.406 21.5194C12.7989 21.8398 12.4954 22 12 22C11.5046 22 11.2011 21.8398 10.594 21.5194C8.89306 20.6217 6.04902 18.8033 4.36621 16M20.9999 8C20.9986 6.54505 20.9763 5.7889 20.5959 5.28529C20.1918 4.75029 19.2781 4.49056 17.4507 3.9711C16.2022 3.6162 15.1016 3.18863 14.2223 2.79829C13.0234 2.2661 12.424 2 12 2C11.576 2 10.9766 2.2661 9.77771 2.79829C8.89839 3.18863 7.79784 3.61619 6.54933 3.9711C4.72193 4.49056 3.80822 4.75029 3.40411 5.28529C3.02371 5.7889 3.00139 6.54505 3.00008 8"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">Secure & Reliable</h3>
+              <p class="text-sm text-muted-foreground">
+                Your data is safe with enterprise-level protection.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg
+              class="w-12 h-12"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="36"
+              height="36"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M12 22L10 16H2L4 22H12ZM12 22H16"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 13V12.5C12 10.6144 12 9.67157 11.4142 9.08579C10.8284 8.5 9.88562 8.5 8 8.5C6.11438 8.5 5.17157 8.5 4.58579 9.08579C4 9.67157 4 10.6144 4 12.5V13"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M19 13C19 14.1046 18.1046 15 17 15C15.8954 15 15 14.1046 15 13C15 11.8954 15.8954 11 17 11C18.1046 11 19 11.8954 19 13Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M10 4C10 5.10457 9.10457 6 8 6C6.89543 6 6 5.10457 6 4C6 2.89543 6.89543 2 8 2C9.10457 2 10 2.89543 10 4Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M14 17.5H20C21.1046 17.5 22 18.3954 22 19.5V20C22 21.1046 21.1046 22 20 22H19"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">Dedicated Support</h3>
+              <p class="text-sm text-muted-foreground">
+                Our expert team is always ready to help.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg
+              class="w-12 h-12"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="36"
+              height="36"
+              color="#000000"
+              fill="none"
+            >
+              <path d="M13 11L18 6" stroke="currentColor" stroke-width="1.5" />
+              <path
+                d="M19 7L17 5L19.5 3.5L20.5 4.5L19 7Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4.02513 8.97487C3.01416 7.96391 2.75095 6.48836 3.23548 5.23548L4.65748 6.65748H6.65748V4.65748L5.23548 3.23548C6.48836 2.75095 7.96391 3.01416 8.97487 4.02513C9.98621 5.03647 10.2493 6.51274 9.76398 7.76593L16.2341 14.236C17.4873 13.7507 18.9635 14.0138 19.9749 15.0251C20.9858 16.0361 21.2491 17.5116 20.7645 18.7645L19.3425 17.3425L17.3425 17.3425V19.3425L18.7645 20.7645C17.5116 21.2491 16.0361 20.9858 15.0251 19.9749C14.0145 18.9643 13.7511 17.4895 14.2349 16.2369L7.76312 9.76507C6.51053 10.2489 5.03571 9.98546 4.02513 8.97487Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.203 14.5L6.59897 20.1041C6.07115 20.6319 5.2154 20.6319 4.68758 20.1041L3.89586 19.3124C3.36805 18.7846 3.36805 17.9288 3.89586 17.401L9.49994 11.7969"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">Customizable Tools</h3>
+              <p class="text-sm text-muted-foreground">
+                Tailor your experience to fit your workflow.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg
+              class="h-12 w-12"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="36"
+              height="36"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M20.5 5.5C20.5 7.15685 19.1569 8.5 17.5 8.5C15.8431 8.5 14.5 7.15685 14.5 5.5C14.5 3.84315 15.8431 2.5 17.5 2.5C19.1569 2.5 20.5 3.84315 20.5 5.5Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M8.5 11.5C8.5 13.1569 7.15685 14.5 5.5 14.5C3.84315 14.5 2.5 13.1569 2.5 11.5C2.5 9.84315 3.84315 8.5 5.5 8.5C7.15685 8.5 8.5 9.84315 8.5 11.5Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M21.5 18.5C21.5 20.1569 20.1569 21.5 18.5 21.5C16.8431 21.5 15.5 20.1569 15.5 18.5C15.5 16.8431 16.8431 15.5 18.5 15.5C20.1569 15.5 21.5 16.8431 21.5 18.5Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M14.5348 4.58109C14.1554 4.52765 13.7677 4.5 13.3733 4.5C10.2974 4.5 7.62058 6.18227 6.24054 8.66317M19.7131 7.49453C20.8311 8.86497 21.5 10.6056 21.5 12.5C21.5 13.8758 21.1472 15.1705 20.5258 16.3012M15.8816 20.1117C15.0917 20.3638 14.2486 20.5 13.3733 20.5C9.58287 20.5 6.39853 17.9454 5.5 14.4898"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">Continuous Innovation</h3>
+              <p class="text-sm text-muted-foreground">
+                Stay ahead with new features and updates designed to keep your
+                business competitive.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Tag -->
+    <section class="py-20">
+      <div
+        class="overflow-hidden whitespace-nowrap py-6 bg-indigo-600 text-white"
+      >
+        <div class="animate-marquee inline-flex items-center gap-8">
+          <span class="text-base font-medium">Shop</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Dashboard</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Car Dealer</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Car Dealership</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Electric cars</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Manual Cars</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Car marketplace</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Customizable Portal</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Lead Announcements</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Invoices</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Effortless Control</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>AI Technology</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Social Media Sharing</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Effortless Sync</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>High Level Security</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+
+          <span class="text-base font-medium">Shop</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Dashboard</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Car Dealer</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Car Dealership</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Electric cars</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Manual Cars</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Car marketplace</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Customizable Portal</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Lead Announcements</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Invoices</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Effortless Control</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>AI Technology</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Social Media Sharing</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>Effortless Sync</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <span>High Level Security</span>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="max-w-7xl mx-auto px-4 flex flex-col justify-center">
+        <div class="flex flex-col">
+          <!-- Starts component -->
+          <div class="flex flex-col items-center justify-center gap-12">
+            <div
+              class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-24 items-center"
+            >
+              <div>
+                <p
+                  class="text-4xl tracking-tighter font-semibold text-gray-700 text-balance"
+                >
+                  Dashboard's Main
+                </p>
+                <p class="text-sm mt-4 text-gray-700 text-balance">
+                  Our dashboard provides a comprehensive overview of your
+                  dealership's performance, enabling you to track stock, sales,
+                  and activities effortlessly. Stay ahead with data-driven
+                  decisions and streamline your operations like never before.
+                </p>
+                <div
+                  class="mt-6 text-xs font-medium grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-2 text-gray-950"
+                >
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Stock Overview
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Sales Overview
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Recent Stock
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Recent Sold Stock
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Recent Activity
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      User Information
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Navigation Sidebar
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Data Visualization
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Recent Activity
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full md:order-first">
+                <img
+                  src="./assets/images/dashboardmain.png"
+                  alt="#_"
+                  class="bg-gray-200 shadow-box shadow-gray-500/30 overflow-hidden aspect-square w-full h-full object-none object-left-top"
+                />
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-24 items-center md:flex-row-reverse"
+            >
+              <div>
+                <p
+                  class="text-4xl tracking-tighter font-semibold text-gray-700 text-balance"
+                >
+                  Vehicle Listing Page
+                </p>
+                <p class="text-sm mt-4 text-gray-700 text-balance">
+                  On the vehicle listing page, you can view detailed information
+                  about each vehicle, including the registration number, make,
+                  model, company, inquiries, price, mileage, MOT expiry, and
+                  more. This page provides a comprehensive overview of your
+                  stock, enabling you to manage and track vehicles efficiently.
+                </p>
+                <div
+                  class="mt-6 text-xs font-medium grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-2 text-gray-950"
+                >
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Comprehensive Vehicle Details
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Stock Management
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Safety and Quality Check
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Engagement Features
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Quick Actions
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Search and Filter
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      User-Friendly Interface
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full">
+                <img
+                  src="./assets/images/carlisting.png"
+                  alt="#_"
+                  class="bg-gray-200 shadow-box shadow-gray-500/30 overflow-hidden aspect-square w-full h-full object-none object-left-top"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Emds component -->
+          <!-- Starts component -->
+          <div class="flex flex-col items-center justify-center gap-12">
+            <div
+              class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-24 items-center"
+            >
+              <div>
+                <p
+                  class="text-4xl tracking-tighter font-semibold text-gray-700 text-balance"
+                >
+                  Leads Page
+                </p>
+                <p class="text-sm mt-4 text-gray-700 text-balance">
+                  The Leads Page provides a centralized platform to manage and
+                  track potential customer inquiries, ensuring no opportunity is
+                  missed. With real-time updates, detailed lead information, and
+                  streamlined communication tools, it empowers your dealership
+                  to convert prospects into loyal customers efficiently.
+                </p>
+                <div
+                  class="mt-6 text-xs font-medium grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-2 text-gray-950"
+                >
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Centralized Lead Management
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Real-Time Updates
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Detailed Lead Information
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Streamlined Communication Tools
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Lead Prioritization
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Conversion Tracking
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full md:order-first">
+                <img
+                  src="./assets/images/dashboardmain.png"
+                  alt="#_"
+                  class="bg-gray-200 shadow-box shadow-gray-500/30 overflow-hidden aspect-square w-full h-full object-none object-left-top"
+                />
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-24 items-center md:flex-row-reverse"
+            >
+              <div>
+                <p
+                  class="text-4xl tracking-tighter font-semibold text-gray-700 text-balance"
+                >
+                  Email Manager Page
+                </p>
+                <p class="text-sm mt-4 text-gray-700 text-balance">
+                  The Email Template Page allows users to seamlessly switch
+                  between pre-designed email templates tailored for various
+                  dealership needs. Whether it's promotional campaigns, customer
+                  follow-ups, or service reminders, this page provides a
+                  user-friendly interface to customize and manage email
+                  templates efficiently, ensuring effective communication with
+                  your audience.
+                </p>
+                <div
+                  class="mt-6 text-xs font-medium grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-2 text-gray-950"
+                >
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Pre-Designed Templates
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Easy Navigation
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Time-Saving
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Responsive Design
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Preview Feature
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Integration Ready
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Enhanced Communication
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full">
+                <img
+                  src="./assets/images/emailTemplate.png"
+                  alt="#_"
+                  class="bg-gray-200 shadow-box shadow-gray-500/30 overflow-hidden aspect-square w-full h-full object-none object-left-top"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Emds component -->
+          <!-- Starts component -->
+          <div class="flex flex-col items-center justify-center gap-12">
+            <div
+              class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-24 items-center"
+            >
+              <div>
+                <p
+                  class="text-4xl tracking-tighter font-semibold text-gray-700 text-balance"
+                >
+                  Reports Page
+                </p>
+                <p class="text-sm mt-4 text-gray-700 text-balance">
+                  The Reports Page provides a detailed breakdown of your
+                  dealership's performance, offering insights into profit/loss,
+                  VAT margins, stock availability, sales, purchases, and more.
+                  With dedicated tabs for finance, add-ons, expenses, and
+                  salesperson performance, this page ensures you have all the
+                  data you need to make informed decisions and optimize
+                  operations.
+                </p>
+                <div
+                  class="mt-6 text-xs font-medium grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-2 text-gray-950"
+                >
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Profit/Loss Analysis
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      VAT Insights
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Stock Overview
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Sales and Purchases
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Finance Tracking
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Add-Ons and Expenses
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      Salesperson Performance
+                    </span>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 text-xs text-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5 w-5 shrink-0 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+                      ></path>
+                    </svg>
+                    <span class="text-gray-950 font-medium text-sm">
+                      MOT Expiry Management
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full md:order-first">
+                <img
+                  src="./assets/images/reportsPage.png"
+                  alt="#_"
+                  class="bg-gray-200 shadow-box shadow-gray-500/30 overflow-hidden aspect-square w-full h-full object-none object-left-top"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Emds component -->
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonies" class="py-20 mt-20">
+      <div class="max-w-6xl mx-8 md:mx-10 lg:mx-20 xl:mx-auto">
+        <div
+          class="transition duration-500 ease-in-out transform scale-100 translate-x-0 translate-y-0 opacity-100"
+        >
+          <h2
+            class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl mb-12 sm:mb-20 text-center"
+          >
+            Why We’re the Best Choice for You
+          </h2>
+        </div>
+
+        <div
+          class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+        >
+          <ul class="space-y-8">
+            <li class="text-sm leading-6">
+              <div class="relative group">
+                <div
+                  class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200"
+                ></div>
+                <a href="https://twitter.com/kanyewest" class="cursor-pointer">
+                  <div
+                    class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1276461929934942210/cqNhNk6v_400x400.jpg"
+                        class="w-12 h-12 bg-center bg-cover border rounded-full"
+                        alt="Kanye West"
+                      />
+                      <div>
+                        <h3 class="text-lg font-semibold text-white">
+                          Kanye West
+                        </h3>
+                        <p class="text-gray-500 text-md">
+                          Rapper &amp; Entrepreneur
+                        </p>
+                      </div>
+                    </div>
+                    <p class="leading-normal text-gray-300 text-md">
+                      Find God.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="text-sm leading-6">
+              <div class="relative group">
+                <div
+                  class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200"
+                ></div>
+                <a href="https://twitter.com/tim_cook" class="cursor-pointer">
+                  <div
+                    class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
+                        class="w-12 h-12 bg-center bg-cover border rounded-full"
+                        alt="Tim Cook"
+                      />
+                      <div>
+                        <h3 class="text-lg font-semibold text-white">
+                          Tim Cook
+                        </h3>
+                        <p class="text-gray-500 text-md">CEO of Apple</p>
+                      </div>
+                    </div>
+                    <p class="leading-normal text-gray-300 text-md">
+                      Diam quis enim lobortis scelerisque fermentum dui faucibus
+                      in ornare. Donec pretium vulputate sapien nec sagittis
+                      aliquam malesuada bibendum.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="text-sm leading-6">
+              <div class="relative group">
+                <div
+                  class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200"
+                ></div>
+                <a href="https://twitter.com/kanyewest" class="cursor-pointer">
+                  <div
+                    class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1276461929934942210/cqNhNk6v_400x400.jpg"
+                        class="w-12 h-12 bg-center bg-cover border rounded-full"
+                        alt="Kanye West"
+                      />
+                      <div>
+                        <h3 class="text-lg font-semibold text-white">
+                          Kanye West
+                        </h3>
+                        <p class="text-gray-500 text-md">
+                          Rapper &amp; Entrepreneur
+                        </p>
+                      </div>
+                    </div>
+                    <p class="leading-normal text-gray-300 text-md">
+                      Find God.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="text-sm leading-6">
+              <div class="relative group">
+                <div
+                  class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200"
+                ></div>
+                <a href="https://twitter.com/tim_cook" class="cursor-pointer">
+                  <div
+                    class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
+                        class="w-12 h-12 bg-center bg-cover border rounded-full"
+                        alt="Tim Cook"
+                      />
+                      <div>
+                        <h3 class="text-lg font-semibold text-white">
+                          Tim Cook
+                        </h3>
+                        <p class="text-gray-500 text-md">CEO of Apple</p>
+                      </div>
+                    </div>
+                    <p class="leading-normal text-gray-300 text-md">
+                      Diam quis enim lobortis scelerisque fermentum dui faucibus
+                      in ornare. Donec pretium vulputate sapien nec sagittis
+                      aliquam malesuada bibendum.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="hidden space-y-8 sm:block">
+            <li class="text-sm leading-6">
+              <div class="relative group">
+                <div
+                  class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200"
+                ></div>
+                <a href="https://twitter.com/paraga" class="cursor-pointer">
+                  <div
+                    class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1375285353146327052/y6jeByyD_400x400.jpg"
+                        class="w-12 h-12 bg-center bg-cover border rounded-full"
+                        alt="Parag Agrawal"
+                      />
+                      <div>
+                        <h3 class="text-lg font-semibold text-white">
+                          Parag Agrawal
+                        </h3>
+                        <p class="text-gray-500 text-md">CEO of Twitter</p>
+                      </div>
+                    </div>
+                    <p class="leading-normal text-gray-300 text-md">
+                      Enim neque volutpat ac tincidunt vitae semper. Mattis
+                      aliquam faucibus purus in massa tempor. Neque vitae tempus
+                      quam pellentesque nec. Turpis cursus in hac habitasse
+                      platea dictumst.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="text-sm leading-6">
+              <div class="relative group">
+                <div
+                  class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200"
+                ></div>
+                <a href="https://twitter.com/tim_cook" class="cursor-pointer">
+                  <div
+                    class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
+                        class="w-12 h-12 bg-center bg-cover border rounded-full"
+                        alt="Tim Cook"
+                      />
+                      <div>
+                        <h3 class="text-lg font-semibold text-white">
+                          Tim Cook
+                        </h3>
+                        <p class="text-gray-500 text-md">CEO of Apple</p>
+                      </div>
+                    </div>
+                    <p class="leading-normal text-gray-300 text-md">
+                      Diam quis enim lobortis scelerisque fermentum dui faucibus
+                      in ornare. Donec pretium vulputate sapien nec sagittis
+                      aliquam malesuada bibendum.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="text-sm leading-6">
+              <div class="relative group">
+                <div
+                  class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200"
+                ></div>
+                <a href="https://twitter.com/paraga" class="cursor-pointer">
+                  <div
+                    class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1375285353146327052/y6jeByyD_400x400.jpg"
+                        class="w-12 h-12 bg-center bg-cover border rounded-full"
+                        alt="Parag Agrawal"
+                      />
+                      <div>
+                        <h3 class="text-lg font-semibold text-white">
+                          Parag Agrawal
+                        </h3>
+                        <p class="text-gray-500 text-md">CEO of Twitter</p>
+                      </div>
+                    </div>
+                    <p class="leading-normal text-gray-300 text-md">
+                      Enim neque volutpat ac tincidunt vitae semper. Mattis
+                      aliquam faucibus purus in massa tempor. Neque vitae tempus
+                      quam pellentesque nec. Turpis cursus in hac habitasse
+                      platea dictumst.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="text-sm leading-6">
+              <div class="relative group">
+                <div
+                  class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200"
+                ></div>
+                <a href="https://twitter.com/tim_cook" class="cursor-pointer">
+                  <div
+                    class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
+                        class="w-12 h-12 bg-center bg-cover border rounded-full"
+                        alt="Tim Cook"
+                      />
+                      <div>
+                        <h3 class="text-lg font-semibold text-white">
+                          Tim Cook
+                        </h3>
+                        <p class="text-gray-500 text-md">CEO of Apple</p>
+                      </div>
+                    </div>
+                    <p class="leading-normal text-gray-300 text-md">
+                      Diam quis enim lobortis scelerisque fermentum dui faucibus
+                      in ornare. Donec pretium vulputate sapien nec sagittis
+                      aliquam malesuada bibendum.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="hidden space-y-8 lg:block">
+            <li class="text-sm leading-6">
+              <div class="relative group">
+                <div
+                  class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200"
+                ></div>
+                <a
+                  href="https://twitter.com/satyanadella"
+                  class="cursor-pointer"
+                >
+                  <div
+                    class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1221837516816306177/_Ld4un5A_400x400.jpg"
+                        class="w-12 h-12 bg-center bg-cover border rounded-full"
+                        alt="Satya Nadella"
+                      />
+                      <div>
+                        <h3 class="text-lg font-semibold text-white">
+                          Satya Nadella
+                        </h3>
+                        <p class="text-gray-500 text-md">CEO of Microsoft</p>
+                      </div>
+                    </div>
+                    <p class="leading-normal text-gray-300 text-md">
+                      Tortor dignissim convallis aenean et tortor at. At
+                      ultrices mi tempus imperdiet nulla malesuada. Id cursus
+                      metus aliquam eleifend mi. Quis ipsum suspendisse ultrices
+                      gravida dictum fusce ut.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="text-sm leading-6">
+              <div class="relative group">
+                <div
+                  class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200"
+                ></div>
+                <a
+                  href="https://twitter.com/dan_schulman"
+                  class="cursor-pointer"
+                >
+                  <div
+                    class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/516916920482672641/3jCeLgFb_400x400.jpeg"
+                        class="w-12 h-12 bg-center bg-cover border rounded-full"
+                        alt="Dan Schulman"
+                      />
+                      <div>
+                        <h3 class="text-lg font-semibold text-white">
+                          Dan Schulman
+                        </h3>
+                        <p class="text-gray-500 text-md">CEO of PayPal</p>
+                      </div>
+                    </div>
+                    <p class="leading-normal text-gray-300 text-md">
+                      Quam pellentesque nec nam aliquam sem et tortor consequat
+                      id. Enim sit amet venenatis urna cursus.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="text-sm leading-6">
+              <div class="relative group">
+                <div
+                  class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200"
+                ></div>
+                <a
+                  href="https://twitter.com/satyanadella"
+                  class="cursor-pointer"
+                >
+                  <div
+                    class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1221837516816306177/_Ld4un5A_400x400.jpg"
+                        class="w-12 h-12 bg-center bg-cover border rounded-full"
+                        alt="Satya Nadella"
+                      />
+                      <div>
+                        <h3 class="text-lg font-semibold text-white">
+                          Satya Nadella
+                        </h3>
+                        <p class="text-gray-500 text-md">CEO of Microsoft</p>
+                      </div>
+                    </div>
+                    <p class="leading-normal text-gray-300 text-md">
+                      Tortor dignissim convallis aenean et tortor at. At
+                      ultrices mi tempus imperdiet nulla malesuada. Id cursus
+                      metus aliquam eleifend mi. Quis ipsum suspendisse ultrices
+                      gravida dictum fusce ut.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="text-sm leading-6">
+              <div class="relative group">
+                <div
+                  class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200"
+                ></div>
+                <a
+                  href="https://twitter.com/dan_schulman"
+                  class="cursor-pointer"
+                >
+                  <div
+                    class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/516916920482672641/3jCeLgFb_400x400.jpeg"
+                        class="w-12 h-12 bg-center bg-cover border rounded-full"
+                        alt="Dan Schulman"
+                      />
+                      <div>
+                        <h3 class="text-lg font-semibold text-white">
+                          Dan Schulman
+                        </h3>
+                        <p class="text-gray-500 text-md">CEO of PayPal</p>
+                      </div>
+                    </div>
+                    <p class="leading-normal text-gray-300 text-md">
+                      Quam pellentesque nec nam aliquam sem et tortor consequat
+                      id. Enim sit amet venenatis urna cursus.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div
+        class="max-w-7xl px-4 mx-auto py-12 lg:py-24 space-y-24 flex flex-col justify-center lg:h-screen"
+      >
+        <!-- Starts component -->
+        <div
+          class="grid grid-cols-1 gap-2 mt-12 list-none md:grid-cols-3 lg:mt-24"
+          role="list"
+        >
+          <!---
+            // Loop through the features array to render each feature dynamically.
+            //
+            // Apply dynamic background color using the bgColor property from the feature object. Also, make the background slightly transparent on hover to
+            // reveal the background image more clearly.
+            //
+            // The title's color changes on hover, using the titleColor property from the feature object. This demonstrates how to dynamically apply Tailwind
+            // CSS classes based on component state or properties.
+            //
+            //  {String(index + 1).padStart(2, "0") + "⏤"} Converts the current index (from iterating over the features array) to a string and adds 1 to it,
+            // and adds a dash at the end of the number
+            -->
+          <article
+            class="mx-auto shadow-xl bg-cover bg-center min-h-150 relative border-8 border-black transform duration-500 hover:-translate-y-12 group"
+            style="
+              background-image: url('https://i.pinimg.com/736x/2b/74/7b/2b747b71b782a8833f2b3ad9b0e37cd1.jpg');
+            "
+          >
+            <div
+              class="bg-black relative h-full group-hover:bg-opacity-0 min-h-150 flex flex-wrap flex-col pt-[30rem] hover:bg-opacity-75 transform duration-300"
+            >
+              <div class="bg-black p-8 h-full justify-end flex flex-col">
+                <h1
+                  class="text-white mt-2 text-xl mb-5 transform translate-y-20 uppercase group-hover:translate-y-0 duration-300 group-hover:text-orange-500"
+                >
+                  01⏤ Experience
+                </h1>
+                <p
+                  class="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500"
+                >
+                  Crafting an effortless journey with user-first.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article
+            class="mx-auto shadow-xl bg-cover bg-center min-h-150 relative border-8 border-black transform duration-500 hover:-translate-y-12 group"
+            style="
+              background-image: url('https://i.pinimg.com/564x/3c/c2/6c/3cc26c0140c2f0dc70d8aa48416c41dc.jpg');
+            "
+          >
+            <div
+              class="bg-black relative h-full group-hover:bg-opacity-0 min-h-150 flex flex-wrap flex-col pt-[30rem] hover:bg-opacity-75 transform duration-300"
+            >
+              <div class="bg-black p-8 h-full justify-end flex flex-col">
+                <h1
+                  class="text-white mt-2 text-xl mb-5 transform translate-y-20 uppercase group-hover:translate-y-0 duration-300 group-hover:text-indigo-400"
+                >
+                  02⏤ Interaction
+                </h1>
+                <p
+                  class="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500"
+                >
+                  Our platform is designed for simplicity and ease.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article
+            class="mx-auto shadow-xl bg-cover bg-center min-h-150 relative border-8 border-black transform duration-500 hover:-translate-y-12 group"
+            style="
+              background-image: url('https://i.pinimg.com/564x/fa/4f/cf/fa4fcfd2db636f98eb0f2b5aecce0c28.jpg');
+            "
+          >
+            <div
+              class="bg-black relative h-full group-hover:bg-opacity-0 min-h-150 flex flex-wrap flex-col pt-[30rem] hover:bg-opacity-75 transform duration-300"
+            >
+              <div class="bg-black p-8 h-full justify-end flex flex-col">
+                <h1
+                  class="text-white mt-2 text-xl mb-5 transform translate-y-20 uppercase group-hover:translate-y-0 duration-300 group-hover:text-cyan-400"
+                >
+                  03⏤ Design
+                </h1>
+                <p
+                  class="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500"
+                >
+                  Our design philosophy centers around the user.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- ends component -->
+      </div>
+    </section>
+
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
+      <div
+        class="bg-indigo-700 rounded-3xl p-8 text-center sm:p-16 md:px-24 md:py-20 lg:px-28"
+      >
+        <div class="max-w-2xl mx-auto">
+          <h2
+            class="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
+          >
+            Ready to explore the wonders of AI Translation?
+          </h2>
+          <p class="max-w-lg text-base text-indigo-100 mx-auto mt-4 sm:text-lg">
+            Discover how AI-powered translation can enhance your communication
+            across languages in just a few hours.
+          </p>
+        </div>
+        <div
+          class="flex flex-col justify-center gap-4 mt-8 sm:flex-row sm:items-center sm:gap-5"
+        >
+          <a
+            class="inline-flex items-center justify-center bg-white text-lg font-semibold text-indigo-700 shadow-sm transition-all duration-150 rounded-xl px-8 py-4 hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            href="/pricing"
+            >Start a free trial</a
+          >
+          <a
+            class="inline-flex items-center justify-center bg-indigo-700 text-lg font-semibold text-white shadow-sm ring-1 ring-inset ring-white transition-all duration-150 rounded-xl px-8 py-4 hover:bg-indigo-800"
+            href="/book-a-demo"
+            >Book a demo</a
+          >
+        </div>
+        <ul
+          class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-medium text-white mt-8"
+        >
+          <li class="inline-flex items-center gap-2">
+            <svg
+              aria-hidden="true"
+              class="h-5 w-5 shrink-0 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+              ></path></svg
+            >Optimized translation output
+          </li>
+          <li class="inline-flex items-center gap-2">
+            <svg
+              aria-hidden="true"
+              class="h-5 w-5 shrink-0 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+              ></path></svg
+            >Seamless integration with existing workflows
+          </li>
+          <li class="inline-flex items-center gap-2">
+            <svg
+              aria-hidden="true"
+              class="h-5 w-5 shrink-0 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+              ></path></svg
+            >Support for 100+ languages
+          </li>
+          <li class="inline-flex items-center gap-2">
+            <svg
+              aria-hidden="true"
+              class="h-5 w-5 shrink-0 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+              ></path></svg
+            >Flexible subscription plans
+          </li>
+          <li class="inline-flex items-center gap-2">
+            <svg
+              aria-hidden="true"
+              class="h-5 w-5 shrink-0 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"
+              ></path></svg
+            >Effortless cancellation process
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="bg-indigo-700 text-white py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <!-- Company Info -->
+          <div>
+            <h2 class="text-2xl font-bold mb-6">DEALERS HUB</h2>
+            <p class="text-white/80 mb-6">
+              Dealer Hub is an all-in-one platform designed to streamline
+              dealership operations, making management effortless and efficient.
+              From inventory control to finance solutions, we provide the tools
+              dealers need to grow and succeed.
+            </p>
+            <p class="text-white/80 mb-6 flex items-start gap-2">
+              <svg
+                class="text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M22 10.5V9.71749C22 7.77787 22 6.80807 21.4142 6.2055C20.8284 5.60294 19.8856 5.60294 18 5.60294H15.9214C15.004 5.60294 14.9964 5.60116 14.1715 5.18834L10.8399 3.52114C9.44884 2.82504 8.75332 2.47699 8.01238 2.50118C7.27143 2.52537 6.59877 2.91808 5.25345 3.70351L4.02558 4.42037C3.03739 4.99729 2.54329 5.28576 2.27164 5.76564C2 6.24553 2 6.82993 2 7.99873V16.2157C2 17.7514 2 18.5193 2.34226 18.9467C2.57001 19.231 2.88916 19.4222 3.242 19.4856C3.77226 19.5808 4.42148 19.2018 5.71987 18.4437C6.60156 17.929 7.45011 17.3944 8.50487 17.5394C9.38869 17.6608 10.21 18.2185 11 18.6138"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M8 2.5L8 17.5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M15 5.5V9.5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M17.5 12C19.9353 12 22 14.0165 22 16.4629C22 18.9482 19.9017 20.6924 17.9635 21.8783C17.8223 21.9581 17.6625 22 17.5 22C17.3375 22 17.1777 21.9581 17.0365 21.8783C15.1019 20.6808 13 18.9568 13 16.4629C13 14.0165 15.0647 12 17.5 12Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M17.5 16.5H17.509"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              84-A Ford End Road, Bedford MK40 4JX, UK
+            </p>
+          </div>
+
+          <!-- Empty Columns -->
+          <div></div>
+
+          <!-- Links Columns -->
+          <div>
+            <div
+              class="flex flex-col md:flex-col xl:flex-row justify-between gap-5"
+            >
+              <!-- Quick Links -->
+              <div>
+                <h3 class="text-xl font-semibold mb-6">Quick Links</h3>
+                <ul class="space-y-3">
+                  <li>
+                    <a
+                      href="about-us"
+                      class="text-white/80 hover:text-white transition-colors"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="contact-us"
+                      class="text-white/80 hover:text-white transition-colors"
+                      >Contact</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="services"
+                      class="text-white/80 hover:text-white transition-colors"
+                      >Services</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="features"
+                      class="text-white/80 hover:text-white transition-colors"
+                      >Features</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="pricing"
+                      class="text-white/80 hover:text-white transition-colors"
+                      >Pricing</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- Blogs -->
+
+              <div>
+                <h3 class="text-xl font-semibold mb-6 uppercase">Need Help?</h3>
+                <ul class="list-none space-y-3">
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M21 20C20.3567 18.7133 19 17.0243 19 15.5279C19 13.8295 19.3671 11.7341 18.5777 10.1554C18.2445 9.48892 18 8.81397 18 8.05573V4.42857C18 4.19188 17.8081 4 17.5714 4C16.1513 4 15 5.15127 15 6.57143M8 18L11.6348 20.2717C11.8755 20.4222 12.0814 20.6222 12.2389 20.8583L13 22"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="M5.02734 15C5.08201 16.0967 5.24516 16.7809 5.73203 17.2678C6.46426 18 7.64277 18 9.99979 18C12.3568 18 13.5353 18 14.2676 17.2678C14.9998 16.5355 14.9998 15.357 14.9998 13V7C14.9998 4.64298 14.9998 3.46447 14.2676 2.73223C13.5353 2 12.3568 2 9.99979 2C7.64277 2 6.46426 2 5.73203 2.73223C5.24516 3.2191 5.08201 3.90328 5.02734 5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M4.25 7.5H5.75C6.44036 7.5 7 6.94036 7 6.25C7 5.55964 6.44036 5 5.75 5L4.25 5C3.55964 5 3 5.55964 3 6.25C3 6.94036 3.55964 7.5 4.25 7.5ZM4.25 7.5L6.75 7.5C7.44036 7.5 8 8.05964 8 8.75C8 9.44036 7.44036 10 6.75 10L4.25 10M4.25 7.5C3.55964 7.5 3 8.05964 3 8.75C3 9.44036 3.55964 10 4.25 10M4.25 10L5.75 10C6.44036 10 7 10.5596 7 11.25C7 11.9404 6.44036 12.5 5.75 12.5H4.25M4.25 10C3.55964 10 3 10.5596 3 11.25C3 11.9404 3.55964 12.5 4.25 12.5M4.25 12.5H5.25C5.94036 12.5 6.5 13.0596 6.5 13.75C6.5 14.4404 5.94036 15 5.25 15H4.25C3.55964 15 3 14.4404 3 13.75C3 13.0596 3.55964 12.5 4.25 12.5Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="M9.99981 15H10.0088"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                    <a class="text-dark flex items-center" href="#"
+                      >0800 0096612</a
+                    >
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.00035 7L3.78154 7.81253C2.90783 8.39501 2.47097 8.68625 2.23422 9.13041C1.99747 9.57457 1.99923 10.0966 2.00273 11.1406C2.00696 12.3975 2.01864 13.6782 2.05099 14.9741C2.12773 18.0487 2.16611 19.586 3.29651 20.7164C4.42691 21.8469 5.98497 21.8858 9.10108 21.9637C11.0397 22.0121 12.9611 22.0121 14.8996 21.9637C18.0158 21.8858 19.5738 21.8469 20.7042 20.7164C21.8346 19.586 21.873 18.0487 21.9497 14.9741C21.9821 13.6782 21.9937 12.3975 21.998 11.1406C22.0015 10.0966 22.0032 9.57456 21.7665 9.13041C21.5297 8.68625 21.0929 8.39501 20.2191 7.81253L19.0003 7"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M2 10L8.91302 14.1478C10.417 15.0502 11.169 15.5014 12 15.5014C12.831 15.5014 13.583 15.0502 15.087 14.1478L22 10"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M4.99998 12V6C4.99998 4.11438 4.99998 3.17157 5.58577 2.58579C6.17156 2 7.11437 2 8.99998 2H15C16.8856 2 17.8284 2 18.4142 2.58579C19 3.17157 19 4.11438 19 6V12"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      ></path>
+                      <path
+                        d="M10 10H14M10 6H14"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                    <a class="text-dark flex items-center" href="#"
+                      >info@dealershub.co.uk</a
+                    >
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M9 9L13.0001 12.9996M16 8L11 13"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                    <span>Mon - Sat | 09:00 - 18:00</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M18 2V4M6 2V4"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M3 8H21"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M2.5 12.2432C2.5 7.88594 2.5 5.70728 3.75212 4.35364C5.00424 3 7.01949 3 11.05 3H12.95C16.9805 3 18.9958 3 20.2479 4.35364C21.5 5.70728 21.5 7.88594 21.5 12.2432V12.7568C21.5 17.1141 21.5 19.2927 20.2479 20.6464C18.9958 22 16.9805 22 12.95 22H11.05C7.01949 22 5.00424 22 3.75212 20.6464C2.5 19.2927 2.5 17.1141 2.5 12.7568V12.2432Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M9.5 12.5L12 15M12 15L14.5 17.5M12 15L14.5 12.5M12 15L9.5 17.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                    <span>Sunday Closed</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div
+          class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p class="text-white/80">© 2025. All rights reserved.</p>
+
+          <!-- Social Icons with Tooltips -->
+
+          <!-- Scroll to Top -->
+          <button
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 10l7-7m0 0l7 7m-7-7v18"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
