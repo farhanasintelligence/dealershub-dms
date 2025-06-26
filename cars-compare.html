@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>DMS | Dealers Hub</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Alpine JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- Data AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Car Compare Section -->
+    <div
+      class="relative mb-20 flex w-[100vw] gap-x-2 overflow-x-hidden md:mx-auto md:w-[80vw] lg:w-[94vw] lg:gap-x-4 xxxl:mx-auto xxxl:w-[90vw] xxxl:max-w-[80vw] ultrawide:w-[90vw] ultrawide:max-w-screen-2xl megawide:w-[1900px]"
+    >
+      <div
+        class="flex h-[837px] max-w-[100px] flex-col justify-between rounded-2xl border border-dashed border-indigo-600 bg-white shadow-md p-4 lg:h-[900px] lg:min-w-[200px]"
+      >
+        <div class="max-w-[150px] text-wrap">
+          <svg
+            width="43"
+            height="43"
+            viewBox="0 0 43 43"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_4582_450)">
+              <mask
+                id="mask0_4582_450"
+                style="mask-type: luminance"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="43"
+                height="43"
+              >
+                <path d="M43 0H0V43H43V0Z" fill="white" />
+              </mask>
+              <g mask="url(#mask0_4582_450)">
+                <path
+                  d="M17.9167 39.4153C17.9167 34.6635 18.0126 28.3147 21.3727 24.9547C24.7327 21.5946 31.0815 21.4987 35.8333 21.4987C31.0815 21.4987 24.7327 21.4027 21.3727 18.0427C18.0126 14.6826 17.9167 8.33382 17.9167 3.58203C17.9167 8.33382 17.8207 14.6826 14.4607 18.0427C11.1006 21.4027 4.7518 21.4987 0 21.4987C4.7518 21.4987 11.1006 21.5946 14.4607 24.9547C17.8207 28.3147 17.9167 34.6635 17.9167 39.4153Z"
+                  fill="#4F46E5"
+                />
+              </g>
+            </g>
+            <defs>
+              <clipPath id="clip0_4582_450">
+                <rect width="43" height="43" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <p
+            class="mt-2 font-urbanist text-base font-semibold text-primary-foreground lg:text-2xl"
+          >
+            Compare Similar Cars
+          </p>
+        </div>
+        <div class="flex flex-col space-y-2">
+          <span
+            class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+            >Price</span
+          ><span
+            class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+            >Year</span
+          ><span
+            class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+            >Mileage</span
+          ><span
+            class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+            >Warranty</span
+          ><span
+            class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+            >Transmission</span
+          ><span
+            class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+            >Engine Size</span
+          ><span
+            class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+            >Fuel Type</span
+          ><span
+            class="h-[2.7rem] border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:h-fit lg:text-sm"
+            >Rear Camera</span
+          ><span
+            class="h-[2.7rem] border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:h-fit lg:text-sm"
+            >Parking Sensors</span
+          ><span
+            class="h-[2.7rem] border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:h-fit lg:text-sm"
+            >Leather Seats</span
+          ><span
+            class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+            >Sunroof</span
+          >
+        </div>
+      </div>
+      <div class="!no-scrollbar overflow-x-auto pb-4 lg:flex-1">
+        <div
+          class="flex h-[840px] min-w-[100%] gap-x-4 lg:h-[900px] lg:min-w-[700px]"
+        >
+          <div
+            class="thin-scrollbar flex max-w-full gap-2 overflow-x-auto overflow-y-hidden lg:gap-4"
+          >
+            <div class="flex">
+              <div
+                class="relative flex h-full w-[180px] flex-col justify-between rounded-3xl bg-white p-1 md:min-w-[260px] lg:min-w-[350px] lg:max-w-fit lg:flex-1"
+                style="
+                  opacity: 1;
+                  transform: none;
+                  transform-origin: 50% 50% 0px;
+                "
+              >
+                <a href="/buy-used-cars/vehicle/9697-dodge-challenger-rt"
+                  ><div class="relative h-32 lg:h-52">
+                    <img
+                      alt="Dodge Challenger R/T"
+                      decoding="async"
+                      data-nimg="fill"
+                      class="rounded-3xl object-cover object-bottom transition-transform duration-700"
+                      sizes="(max-width: 768px) 300px, (max-width: 1200px) 400px, 500px"
+                      src="./assets/images/car-image-compare.webp"
+                      style="
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        inset: 0px;
+                        color: transparent;
+                      "
+                    />
+                  </div>
+                  <div class="pl-2 pt-3 lg:p-4">
+                    <div
+                      class="inter flex items-center justify-between text-base"
+                    >
+                      <span
+                        class="max-w-54 line-clamp-2 h-11 text-wrap font-semibold hover:text-primary"
+                        >Dodge Challenger R/T</span
+                      ><span class="font-bold"></span>
+                    </div>
+                    <div
+                      class="inter my-5 flex flex-col justify-between border-b-2 border-secondary pb-5 lg:flex-row"
+                    >
+                      <div class="flex flex-col justify-start space-y-1">
+                        <span class="text-xs font-medium text-[#898989]"
+                          >Starts from</span
+                        ><span class="text-sm font-bold text-primary"
+                          >AED&nbsp;2,448/Month</span
+                        >
+                      </div>
+                      <div
+                        class="mt-3 flex flex-col justify-end space-y-1 lg:mt-0"
+                      >
+                        <span class="text-xs font-medium text-[#898989]"
+                          >Full Price</span
+                        ><span class="text-sm font-bold text-black"
+                          >AED&nbsp;124,999</span
+                        >
+                      </div>
+                    </div>
+                    <div class="pe-2">
+                      <button
+                        class="cursor-pointer rounded-xl text-sm font-semibold bg-indigo-600 text-white w-full py-3 text-center transition-all duration-300 ease-in-out hover:bg-indigo-400 disabled:cursor-not-allowed disabled:opacity-50"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <span class="flex items-center justify-center"
+                          >Book a free test drive</span
+                        >
+                      </button>
+                    </div>
+                  </div></a
+                >
+                <div class="my-3 flex flex-col space-y-2 px-3">
+                  <span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >AED&nbsp;124,999</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >2020</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >69,000 km</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Under Warranty</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Automatic</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Standard</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Petrol</span
+                  ><span
+                    class="h-[2.7rem] border-t-2 border-secondary pt-2 lg:h-fit"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div></span
+                  ><span
+                    class="h-[2.7rem] border-t-2 border-secondary pt-2 lg:h-fit"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div></span
+                  ><span
+                    class="h-[2.7rem] border-t-2 border-secondary pt-2 lg:h-fit"
+                    ><div
+                      class="bg-primary w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-minus"
+                      >
+                        <path d="M5 12h14"></path>
+                      </svg></div></span
+                  ><span class="border-t-2 border-secondary pt-2"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-x-2 lg:gap-x-4" style="opacity: 1">
+              <div
+                class="relative flex h-full w-[180px] flex-col justify-between rounded-3xl bg-white p-1 md:min-w-[260px] lg:min-w-[350px] lg:max-w-fit lg:flex-1"
+                style="opacity: 1; transform: none"
+              >
+                <div class="absolute right-2 top-2 z-10">
+                  <button
+                    class="group rounded-full bg-white p-2 transition-all duration-300 hover:cursor-pointer hover:bg-secondary-light disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-x h-5 w-5 text-primary-foreground transition-all duration-300 group-hover:text-primary"
+                    >
+                      <path d="M18 6 6 18"></path>
+                      <path d="m6 6 12 12"></path>
+                    </svg>
+                  </button>
+                </div>
+                <a
+                  href="/buy-used-cars/vehicle/9673-mercedes-benz-c-class-c300-coupe"
+                  ><div class="relative h-32 lg:h-52">
+                    <img
+                      alt="Mercedes-Benz C-Class C300 Coupe"
+                      decoding="async"
+                      data-nimg="fill"
+                      class="rounded-3xl object-cover object-bottom transition-transform duration-700"
+                      sizes="(max-width: 768px) 300px, (max-width: 1200px) 400px, 500px"
+                      src="./assets/images/car-image-compare.webp"
+                      style="
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        inset: 0px;
+                        color: transparent;
+                      "
+                    />
+                  </div>
+                  <div class="pl-2 pt-3 lg:p-4">
+                    <div
+                      class="inter flex items-center justify-between text-base"
+                    >
+                      <span
+                        class="max-w-54 line-clamp-2 h-11 text-wrap font-semibold hover:text-primary"
+                        >Mercedes-Benz C-Class C300 Coupe</span
+                      ><span class="font-bold"></span>
+                    </div>
+                    <div
+                      class="inter my-5 flex flex-col justify-between border-b-2 border-secondary pb-5 lg:flex-row"
+                    >
+                      <div class="flex flex-col justify-start space-y-1">
+                        <span class="text-xs font-medium text-[#898989]"
+                          >Starts from</span
+                        ><span class="text-sm font-bold text-primary"
+                          >AED&nbsp;2,644/Month</span
+                        >
+                      </div>
+                      <div
+                        class="mt-3 flex flex-col justify-end space-y-1 lg:mt-0"
+                      >
+                        <span class="text-xs font-medium text-[#898989]"
+                          >Full Price</span
+                        ><span class="text-sm font-bold text-black"
+                          >AED&nbsp;134,999</span
+                        >
+                      </div>
+                    </div>
+                    <div class="pe-2">
+                      <button
+                        class="cursor-pointer rounded-xl text-sm font-semibold bg-[#f8f8fb] text-[#3d4750] hover:text-white w-full py-3 text-center transition-all duration-300 ease-in-out hover:bg-indigo-400 disabled:cursor-not-allowed disabled:opacity-50"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <span class="flex items-center justify-center"
+                          >View car details</span
+                        >
+                      </button>
+                    </div>
+                  </div></a
+                >
+                <div class="my-3 flex flex-col space-y-2 px-3">
+                  <span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >AED&nbsp;134,999</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >2019</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >62,000 km</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Under Warranty</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Automatic</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Standard</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Petrol</span
+                  ><span
+                    class="h-[2.7rem] border-t-2 border-secondary pt-2 lg:h-fit"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div></span
+                  ><span
+                    class="h-[2.7rem] border-t-2 border-secondary pt-2 lg:h-fit"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div></span
+                  ><span
+                    class="h-[2.7rem] border-t-2 border-secondary pt-2 lg:h-fit"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div></span
+                  ><span class="border-t-2 border-secondary pt-2"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div
+                  ></span>
+                </div>
+              </div>
+              <div
+                class="relative flex h-full w-[180px] flex-col justify-between rounded-3xl bg-white p-1 md:min-w-[260px] lg:min-w-[350px] lg:max-w-fit lg:flex-1"
+                style="opacity: 1; transform: none"
+              >
+                <div class="absolute right-2 top-2 z-10">
+                  <button
+                    class="group rounded-full bg-white p-2 transition-all duration-300 hover:cursor-pointer hover:bg-secondary-light disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-x h-5 w-5 text-primary-foreground transition-all duration-300 group-hover:text-primary"
+                    >
+                      <path d="M18 6 6 18"></path>
+                      <path d="m6 6 12 12"></path>
+                    </svg>
+                  </button>
+                </div>
+                <a
+                  href="/buy-used-cars/vehicle/7989-audi-a5-40-tfsi-s-line-coupe"
+                  ><div class="relative h-32 lg:h-52">
+                    <img
+                      alt="Audi A5 40 TFSI S LINE Coupe"
+                      decoding="async"
+                      data-nimg="fill"
+                      class="rounded-3xl object-cover object-bottom transition-transform duration-700"
+                      sizes="(max-width: 768px) 300px, (max-width: 1200px) 400px, 500px"
+                      src="./assets/images/car-image-compare.webp"
+                      style="
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        inset: 0px;
+                        color: transparent;
+                      "
+                    />
+                  </div>
+                  <div class="pl-2 pt-3 lg:p-4">
+                    <div
+                      class="inter flex items-center justify-between text-base"
+                    >
+                      <span
+                        class="max-w-54 line-clamp-2 h-11 text-wrap font-semibold hover:text-primary"
+                        >Audi A5 40 TFSI S LINE Coupe</span
+                      ><span class="font-bold"></span>
+                    </div>
+                    <div
+                      class="inter my-5 flex flex-col justify-between border-b-2 border-secondary pb-5 lg:flex-row"
+                    >
+                      <div class="flex flex-col justify-start space-y-1">
+                        <span class="text-xs font-medium text-[#898989]"
+                          >Starts from</span
+                        ><span class="text-sm font-bold text-primary"
+                          >AED&nbsp;1,567/Month</span
+                        >
+                      </div>
+                      <div
+                        class="mt-3 flex flex-col justify-end space-y-1 lg:mt-0"
+                      >
+                        <span class="text-xs font-medium text-[#898989]"
+                          >Full Price</span
+                        ><span class="text-sm font-bold text-black"
+                          >AED&nbsp;79,999</span
+                        >
+                      </div>
+                    </div>
+                    <div class="pe-2">
+                      <button
+                        class="cursor-pointer rounded-xl text-sm font-semibold bg-[#f8f8fb] text-[#3d4750] hover:text-white w-full py-3 text-center transition-all duration-300 ease-in-out hover:bg-indigo-400 disabled:cursor-not-allowed disabled:opacity-50"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <span class="flex items-center justify-center"
+                          >View car details</span
+                        >
+                      </button>
+                    </div>
+                  </div></a
+                >
+                <div class="my-3 flex flex-col space-y-2 px-3">
+                  <span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >AED&nbsp;79,999</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >2018</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >79,000 km</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Under Warranty</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Automatic</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Standard</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Petrol</span
+                  ><span
+                    class="h-[2.7rem] border-t-2 border-secondary pt-2 lg:h-fit"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div></span
+                  ><span
+                    class="h-[2.7rem] border-t-2 border-secondary pt-2 lg:h-fit"
+                    ><div
+                      class="bg-primary w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-minus"
+                      >
+                        <path d="M5 12h14"></path>
+                      </svg></div></span
+                  ><span
+                    class="h-[2.7rem] border-t-2 border-secondary pt-2 lg:h-fit"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div></span
+                  ><span class="border-t-2 border-secondary pt-2"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div
+                  ></span>
+                </div>
+              </div>
+              <div
+                class="relative flex h-full w-[180px] flex-col justify-between rounded-3xl bg-white p-1 md:min-w-[260px] lg:min-w-[350px] lg:max-w-fit lg:flex-1"
+                style="opacity: 1; transform: none"
+              >
+                <div class="absolute right-2 top-2 z-10">
+                  <button
+                    class="group rounded-full bg-white p-2 transition-all duration-300 hover:cursor-pointer hover:bg-secondary-light disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-x h-5 w-5 text-primary-foreground transition-all duration-300 group-hover:text-primary"
+                    >
+                      <path d="M18 6 6 18"></path>
+                      <path d="m6 6 12 12"></path>
+                    </svg>
+                  </button>
+                </div>
+                <a
+                  href="/buy-used-cars/vehicle/9584-mercedes-benz-e-class-coupe-e300"
+                  ><div class="relative h-32 lg:h-52">
+                    <img
+                      alt="Mercedes-Benz E-Class Coupe E300"
+                      decoding="async"
+                      data-nimg="fill"
+                      class="rounded-3xl object-cover object-bottom transition-transform duration-700"
+                      sizes="(max-width: 768px) 300px, (max-width: 1200px) 400px, 500px"
+                      src="./assets/images/car-image-compare.webp"
+                      style="
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        inset: 0px;
+                        color: transparent;
+                      "
+                    />
+                  </div>
+                  <div class="pl-2 pt-3 lg:p-4">
+                    <div
+                      class="inter flex items-center justify-between text-base"
+                    >
+                      <span
+                        class="max-w-54 line-clamp-2 h-11 text-wrap font-semibold hover:text-primary"
+                        >Mercedes-Benz E-Class Coupe E300</span
+                      ><span class="font-bold"></span>
+                    </div>
+                    <div
+                      class="inter my-5 flex flex-col justify-between border-b-2 border-secondary pb-5 lg:flex-row"
+                    >
+                      <div class="flex flex-col justify-start space-y-1">
+                        <span class="text-xs font-medium text-[#898989]"
+                          >Starts from</span
+                        ><span class="text-sm font-bold text-primary"
+                          >AED&nbsp;3,325/Month</span
+                        >
+                      </div>
+                      <div
+                        class="mt-3 flex flex-col justify-end space-y-1 lg:mt-0"
+                      >
+                        <span class="text-xs font-medium text-[#898989]"
+                          >Full Price</span
+                        ><span class="text-sm font-bold text-black"
+                          >AED&nbsp;139,999</span
+                        >
+                      </div>
+                    </div>
+                    <div class="pe-2">
+                      <button
+                        class="cursor-pointer rounded-xl text-sm font-semibold bg-[#f8f8fb] text-[#3d4750] hover:text-white w-full py-3 text-center transition-all duration-300 ease-in-out hover:bg-indigo-400 disabled:cursor-not-allowed disabled:opacity-50"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <span class="flex items-center justify-center"
+                          >View car details</span
+                        >
+                      </button>
+                    </div>
+                  </div></a
+                >
+                <div class="my-3 flex flex-col space-y-2 px-3">
+                  <span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >AED&nbsp;139,999</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >2017</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >72,000 km</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Under Warranty</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Automatic</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Standard</span
+                  ><span
+                    class="border-t-2 border-secondary pt-2 font-inter text-xs font-medium text-primary-foreground lg:text-sm"
+                    >Petrol</span
+                  ><span
+                    class="h-[2.7rem] border-t-2 border-secondary pt-2 lg:h-fit"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div></span
+                  ><span
+                    class="h-[2.7rem] border-t-2 border-secondary pt-2 lg:h-fit"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div></span
+                  ><span
+                    class="h-[2.7rem] border-t-2 border-secondary pt-2 lg:h-fit"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div></span
+                  ><span class="border-t-2 border-secondary pt-2"
+                    ><div
+                      class="bg-success-lighter w-5 h-5 flex items-center justify-center rounded-20 undefined"
+                    >
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z"
+                          fill="transparent"
+                        ></path>
+                        <path
+                          d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z"
+                          fill="white"
+                        ></path>
+                      </svg></div
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="min-w-[50px] md:hidden md:min-w-[80px]"></div>
+          </div>
+          <div
+            class="relative flex h-[840px] min-w-[350px] max-w-[380px] flex-1 flex-col overflow-hidden rounded-3xl border border-dashed border-indigo-600 bg-white p-5 lg:h-[900px]"
+          >
+            <div class="flex flex-col h-[900px]">
+              <div class="no-scrollbar flex-1 overflow-y-auto pb-28">
+                <div
+                  class="inter mb-4 hidden rounded-xl text-sm font-semibold text-primary-foreground lg:flex lg:text-xl lg:text-gray-800"
+                >
+                  Select and filter the cars you want to compare. Adjust
+                  features, specifications, and preferences to find the perfect
+                  match
+                </div>
+                <div class="m-1 mb-3">
+                  <div class="w-full">
+                    <div class="mb-2 flex items-center justify-between">
+                      <span class="inter text-sm font-semibold text-[#000000]"
+                        >Price</span
+                      ><button
+                        class="inter text-sm text-secondary-foreground transition-colors hover:cursor-pointer hover:text-primary"
+                      >
+                        Reset
+                      </button>
+                    </div>
+                    <div
+                      class="flex items-stretch rounded-2xl bg-secondary-light"
+                    >
+                      <div class="w-full">
+                        <div class="css-b62m3t-container">
+                          <span
+                            id="react-select-price-from-live-region"
+                            class="css-7pg0cj-a11yText"
+                          ></span
+                          ><span
+                            aria-live="polite"
+                            aria-atomic="false"
+                            aria-relevant="additions text"
+                            role="log"
+                            class="css-7pg0cj-a11yText"
+                          ></span>
+                          <div
+                            class="flex items-center bg-secondary-light border border-secondary-light rounded-2xl hover:cursor-pointer hover:border-grey-border p-3 transition-all duration-300 !bg-transparent !min-h-0 css-cp01gg-control"
+                          >
+                            <div
+                              class="flex flex-wrap flex-1 px-3 py-2.5 gap-1 css-14oxtc6"
+                            >
+                              <div
+                                class="inter text-secondary-foreground text-medium css-1vlsb4t-placeholder"
+                                id="react-select-price-from-placeholder"
+                              >
+                                From
+                              </div>
+                              <input
+                                id="react-select-price-from-input"
+                                tabindex="0"
+                                inputmode="none"
+                                aria-autocomplete="list"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                                role="combobox"
+                                aria-activedescendant=""
+                                aria-readonly="true"
+                                aria-describedby="react-select-price-from-placeholder"
+                                class="css-1hac4vs-dummyInput"
+                                value=""
+                              />
+                            </div>
+                            <div class="flex items-center px-2 css-1wy0on6">
+                              <span
+                                class="hidden css-j4w2j1-indicatorSeparator"
+                              ></span>
+                              <div
+                                class="!text-gray-400 !hover:text-gray-600 !transition-all !duration-300 !ease-in-out !rotate-0 css-g56vrd-indicatorContainer"
+                                aria-hidden="true"
+                              >
+                                <svg
+                                  height="20"
+                                  width="20"
+                                  viewBox="0 0 20 20"
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  class="css-8mmkcg"
+                                >
+                                  <path
+                                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="w-[2px] bg-gray-200"></div>
+                      <div class="w-full">
+                        <div class="css-b62m3t-container">
+                          <span
+                            id="react-select-price-to-live-region"
+                            class="css-7pg0cj-a11yText"
+                          ></span
+                          ><span
+                            aria-live="polite"
+                            aria-atomic="false"
+                            aria-relevant="additions text"
+                            role="log"
+                            class="css-7pg0cj-a11yText"
+                          ></span>
+                          <div
+                            class="flex items-center bg-secondary-light border border-secondary-light rounded-2xl hover:cursor-pointer hover:border-grey-border transition-all duration-300 !bg-transparent !p-1 !min-h-0 css-cp01gg-control"
+                          >
+                            <div
+                              class="flex flex-wrap flex-1 px-3 py-2.5 gap-1 css-14oxtc6"
+                            >
+                              <div
+                                class="inter text-secondary-foreground text-medium css-1vlsb4t-placeholder"
+                                id="react-select-price-to-placeholder"
+                              >
+                                To
+                              </div>
+                              <input
+                                id="react-select-price-to-input"
+                                tabindex="0"
+                                inputmode="none"
+                                aria-autocomplete="list"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                                role="combobox"
+                                aria-activedescendant=""
+                                aria-readonly="true"
+                                aria-describedby="react-select-price-to-placeholder"
+                                class="css-1hac4vs-dummyInput"
+                                value=""
+                              />
+                            </div>
+                            <div class="flex items-center px-2 css-1wy0on6">
+                              <span
+                                class="hidden css-j4w2j1-indicatorSeparator"
+                              ></span>
+                              <div
+                                class="!text-gray-400 !hover:text-gray-600 !transition-all !duration-300 !ease-in-out !rotate-0 css-g56vrd-indicatorContainer"
+                                aria-hidden="true"
+                              >
+                                <svg
+                                  height="20"
+                                  width="20"
+                                  viewBox="0 0 20 20"
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  class="css-8mmkcg"
+                                >
+                                  <path
+                                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-1 mb-3">
+                  <div class="w-full">
+                    <div class="mb-2 flex items-center justify-between">
+                      <span class="inter text-sm font-semibold text-[#000000]"
+                        >Year</span
+                      ><button
+                        class="inter text-sm text-secondary-foreground transition-colors hover:cursor-pointer hover:text-primary"
+                      >
+                        Reset
+                      </button>
+                    </div>
+                    <div
+                      class="flex items-stretch rounded-2xl bg-secondary-light"
+                    >
+                      <div class="w-full">
+                        <div class="css-b62m3t-container">
+                          <span
+                            id="react-select-year-from-live-region"
+                            class="css-7pg0cj-a11yText"
+                          ></span
+                          ><span
+                            aria-live="polite"
+                            aria-atomic="false"
+                            aria-relevant="additions text"
+                            role="log"
+                            class="css-7pg0cj-a11yText"
+                          ></span>
+                          <div
+                            class="flex items-center bg-secondary-light border border-secondary-light rounded-2xl hover:cursor-pointer hover:border-grey-border transition-all duration-300 !bg-transparent !p-1 !min-h-0 css-cp01gg-control"
+                          >
+                            <div
+                              class="flex flex-wrap flex-1 px-3 py-2.5 gap-1 css-14oxtc6"
+                            >
+                              <div
+                                class="inter text-secondary-foreground text-medium css-1vlsb4t-placeholder"
+                                id="react-select-year-from-placeholder"
+                              >
+                                From
+                              </div>
+                              <input
+                                id="react-select-year-from-input"
+                                tabindex="0"
+                                inputmode="none"
+                                aria-autocomplete="list"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                                role="combobox"
+                                aria-activedescendant=""
+                                aria-readonly="true"
+                                aria-describedby="react-select-year-from-placeholder"
+                                class="css-1hac4vs-dummyInput"
+                                value=""
+                              />
+                            </div>
+                            <div class="flex items-center px-2 css-1wy0on6">
+                              <span
+                                class="hidden css-j4w2j1-indicatorSeparator"
+                              ></span>
+                              <div
+                                class="!text-gray-400 !hover:text-gray-600 !transition-all !duration-300 !ease-in-out !rotate-0 css-g56vrd-indicatorContainer"
+                                aria-hidden="true"
+                              >
+                                <svg
+                                  height="20"
+                                  width="20"
+                                  viewBox="0 0 20 20"
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  class="css-8mmkcg"
+                                >
+                                  <path
+                                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="w-[2px] bg-gray-200"></div>
+                      <div class="w-full">
+                        <div class="css-b62m3t-container">
+                          <span
+                            id="react-select-year-to-live-region"
+                            class="css-7pg0cj-a11yText"
+                          ></span
+                          ><span
+                            aria-live="polite"
+                            aria-atomic="false"
+                            aria-relevant="additions text"
+                            role="log"
+                            class="css-7pg0cj-a11yText"
+                          ></span>
+                          <div
+                            class="flex items-center bg-secondary-light border border-secondary-light rounded-2xl hover:cursor-pointer hover:border-grey-border transition-all duration-300 !bg-transparent !p-1 !min-h-0 css-cp01gg-control"
+                          >
+                            <div
+                              class="flex flex-wrap flex-1 px-3 py-2.5 gap-1 css-14oxtc6"
+                            >
+                              <div
+                                class="inter text-secondary-foreground text-medium css-1vlsb4t-placeholder"
+                                id="react-select-year-to-placeholder"
+                              >
+                                To
+                              </div>
+                              <input
+                                id="react-select-year-to-input"
+                                tabindex="0"
+                                inputmode="none"
+                                aria-autocomplete="list"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                                role="combobox"
+                                aria-activedescendant=""
+                                aria-readonly="true"
+                                aria-describedby="react-select-year-to-placeholder"
+                                class="css-1hac4vs-dummyInput"
+                                value=""
+                              />
+                            </div>
+                            <div class="flex items-center px-2 css-1wy0on6">
+                              <span
+                                class="hidden css-j4w2j1-indicatorSeparator"
+                              ></span>
+                              <div
+                                class="!text-gray-400 !hover:text-gray-600 !transition-all !duration-300 !ease-in-out !rotate-0 css-g56vrd-indicatorContainer"
+                                aria-hidden="true"
+                              >
+                                <svg
+                                  height="20"
+                                  width="20"
+                                  viewBox="0 0 20 20"
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  class="css-8mmkcg"
+                                >
+                                  <path
+                                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mx-1 mb-3">
+                  <p class="mb-2 font-medium text-gray-800">Make</p>
+                  <div class="w-full">
+                    <div class="css-b62m3t-container">
+                      <span
+                        id="react-select-make-filter-live-region"
+                        class="css-7pg0cj-a11yText"
+                      ></span
+                      ><span
+                        aria-live="polite"
+                        aria-atomic="false"
+                        aria-relevant="additions text"
+                        role="log"
+                        class="css-7pg0cj-a11yText"
+                      ></span>
+                      <div
+                        class="flex items-center bg-secondary-light border border-secondary-light rounded-2xl hover:cursor-pointer hover:border-grey-border p-3 transition-all duration-300 css-cp01gg-control"
+                      >
+                        <div
+                          class="flex flex-wrap flex-1 px-3 py-1 gap-1 css-14oxtc6"
+                        >
+                          <div
+                            class="inter text-secondary-foreground text-medium css-1vlsb4t-placeholder"
+                            id="react-select-make-filter-placeholder"
+                          >
+                            Make
+                          </div>
+                          <div
+                            class="text-secondary-foreground font-medium !text-base inter focus:outline-none p-0 m-0 css-n9qnu9"
+                            data-value=""
+                          >
+                            <input
+                              class=""
+                              autocapitalize="none"
+                              autocomplete="off"
+                              autocorrect="off"
+                              id="react-select-make-filter-input"
+                              spellcheck="false"
+                              tabindex="0"
+                              aria-autocomplete="list"
+                              aria-expanded="false"
+                              aria-haspopup="true"
+                              role="combobox"
+                              aria-activedescendant=""
+                              aria-describedby="react-select-make-filter-placeholder"
+                              type="text"
+                              value=""
+                              style="
+                                color: inherit;
+                                background: 0px center;
+                                opacity: 1;
+                                width: 100%;
+                                grid-area: 1 / 2;
+                                font: inherit;
+                                min-width: 2px;
+                                border: 0px;
+                                margin: 0px;
+                                outline: 0px;
+                                padding: 0px;
+                              "
+                            />
+                          </div>
+                        </div>
+                        <div class="flex items-center px-2 css-1wy0on6">
+                          <span
+                            class="hidden css-j4w2j1-indicatorSeparator"
+                          ></span>
+                          <div
+                            class="!text-gray-400 !hover:text-gray-600 !transition-all !duration-300 !ease-in-out !rotate-0 css-g56vrd-indicatorContainer"
+                            aria-hidden="true"
+                          >
+                            <svg
+                              height="20"
+                              width="20"
+                              viewBox="0 0 20 20"
+                              aria-hidden="true"
+                              focusable="false"
+                              class="css-8mmkcg"
+                            >
+                              <path
+                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mx-1 mb-3">
+                  <div class="w-full">
+                    <label
+                      class="inter mb-2 block text-sm font-semibold text-[#000000]"
+                      >Model</label
+                    >
+                    <div class="css-b62m3t-container">
+                      <span
+                        id="react-select-model-filter-live-region"
+                        class="css-7pg0cj-a11yText"
+                      ></span
+                      ><span
+                        aria-live="polite"
+                        aria-atomic="false"
+                        aria-relevant="additions text"
+                        role="log"
+                        class="css-7pg0cj-a11yText"
+                      ></span>
+                      <div
+                        class="flex items-center bg-secondary-light border border-secondary-light rounded-2xl hover:cursor-pointer hover:border-grey-border p-3 transition-all duration-300 css-cp01gg-control"
+                      >
+                        <div
+                          class="flex flex-wrap flex-1 px-3 py-1 gap-1 css-14oxtc6"
+                        >
+                          <div
+                            class="inter text-secondary-foreground text-medium css-1vlsb4t-placeholder"
+                            id="react-select-model-filter-placeholder"
+                          >
+                            Model
+                          </div>
+                          <div
+                            class="text-secondary-foreground font-medium !text-base inter focus:outline-none p-0 m-0 css-n9qnu9"
+                            data-value=""
+                          >
+                            <input
+                              class=""
+                              autocapitalize="none"
+                              autocomplete="off"
+                              autocorrect="off"
+                              id="react-select-model-filter-input"
+                              spellcheck="false"
+                              tabindex="0"
+                              aria-autocomplete="list"
+                              aria-expanded="false"
+                              aria-haspopup="true"
+                              role="combobox"
+                              aria-activedescendant=""
+                              aria-describedby="react-select-model-filter-placeholder"
+                              type="text"
+                              value=""
+                              style="
+                                color: inherit;
+                                background: 0px center;
+                                opacity: 1;
+                                width: 100%;
+                                grid-area: 1 / 2;
+                                font: inherit;
+                                min-width: 2px;
+                                border: 0px;
+                                margin: 0px;
+                                outline: 0px;
+                                padding: 0px;
+                              "
+                            />
+                          </div>
+                        </div>
+                        <div class="flex items-center px-2 css-1wy0on6">
+                          <span
+                            class="hidden css-j4w2j1-indicatorSeparator"
+                          ></span>
+                          <div
+                            class="!text-gray-400 !hover:text-gray-600 !transition-all !duration-300 !ease-in-out !rotate-0 css-g56vrd-indicatorContainer"
+                            aria-hidden="true"
+                          >
+                            <svg
+                              height="20"
+                              width="20"
+                              viewBox="0 0 20 20"
+                              aria-hidden="true"
+                              focusable="false"
+                              class="css-8mmkcg"
+                            >
+                              <path
+                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mx-1 mb-3">
+                  <div class="w-full">
+                    <label
+                      class="inter mb-2 block text-sm font-semibold text-[#000000]"
+                      >Body Type</label
+                    >
+                    <div class="css-b62m3t-container">
+                      <span
+                        id="react-select-bodyType-filter-live-region"
+                        class="css-7pg0cj-a11yText"
+                      ></span
+                      ><span
+                        aria-live="polite"
+                        aria-atomic="false"
+                        aria-relevant="additions text"
+                        role="log"
+                        class="css-7pg0cj-a11yText"
+                      ></span>
+                      <div
+                        class="flex items-center bg-secondary-light border border-secondary-light rounded-2xl hover:cursor-pointer hover:border-grey-border p-3 transition-all duration-300 css-cp01gg-control"
+                      >
+                        <div
+                          class="flex flex-wrap flex-1 px-3 py-1 gap-1 css-14oxtc6"
+                        >
+                          <div
+                            class="inter text-secondary-foreground text-medium css-1vlsb4t-placeholder"
+                            id="react-select-bodyType-filter-placeholder"
+                          >
+                            Body Type
+                          </div>
+                          <div
+                            class="text-secondary-foreground font-medium !text-base inter focus:outline-none p-0 m-0 css-n9qnu9"
+                            data-value=""
+                          >
+                            <input
+                              class=""
+                              autocapitalize="none"
+                              autocomplete="off"
+                              autocorrect="off"
+                              id="react-select-bodyType-filter-input"
+                              spellcheck="false"
+                              tabindex="0"
+                              aria-autocomplete="list"
+                              aria-expanded="false"
+                              aria-haspopup="true"
+                              role="combobox"
+                              aria-activedescendant=""
+                              aria-describedby="react-select-bodyType-filter-placeholder"
+                              type="text"
+                              value=""
+                              style="
+                                color: inherit;
+                                background: 0px center;
+                                opacity: 1;
+                                width: 100%;
+                                grid-area: 1 / 2;
+                                font: inherit;
+                                min-width: 2px;
+                                border: 0px;
+                                margin: 0px;
+                                outline: 0px;
+                                padding: 0px;
+                              "
+                            />
+                          </div>
+                        </div>
+                        <div class="flex items-center px-2 css-1wy0on6">
+                          <span
+                            class="hidden css-j4w2j1-indicatorSeparator"
+                          ></span>
+                          <div
+                            class="!text-gray-400 !hover:text-gray-600 !transition-all !duration-300 !ease-in-out !rotate-0 css-g56vrd-indicatorContainer"
+                            aria-hidden="true"
+                          >
+                            <svg
+                              height="20"
+                              width="20"
+                              viewBox="0 0 20 20"
+                              aria-hidden="true"
+                              focusable="false"
+                              class="css-8mmkcg"
+                            >
+                              <path
+                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute bottom-0 left-0 right-0 rounded-b-3xl bg-white p-6 pt-4 shadow-[0_-2px_3px_-1px_rgba(0,0,0,0.05)]"
+              >
+                <div class="">
+                  <button
+                    disabled=""
+                    class="cursor-pointer font-inter text-sm bg-red text-text-white w-full rounded-xl bg-primary py-3 font-medium text-white transition-colors duration-300 hover:bg-primary-dark disabled:cursor-not-allowed disabled:bg-secondary disabled:text-gray-300"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span class="flex items-center justify-center"
+                      >Show Results</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Data AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="./assets/index.js"></script>
+  </body>
+</html>

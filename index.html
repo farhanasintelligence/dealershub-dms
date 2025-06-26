@@ -3367,7 +3367,7 @@
                         stroke-width="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                      ></path>`
+                      ></path>
                     </svg>
                     <span>Sunday Closed</span>
                   </li>
@@ -3487,6 +3487,60 @@
             </div>
           </div>
           
+          <!-- Map Column -->
+          <div id="map-container" class="h-[400px]
+    <!-- Cookie Consent Box -->
+    <div
+      id="cookie-consent-box"
+      class="fixed bottom-4 left-4 z-50 bg-white rounded-lg shadow-lg max-w-md p-6 border border-gray-200 transform transition-transform duration-300"
+      style="display: none"
+    >
+      <div class="flex justify-between items-start mb-4">
+        <h3 class="text-lg font-semibold text-gray-900">Cookie Settings</h3>
+        <button
+          id="close-cookie-box"
+          class="text-gray-400 hover:text-gray-600 transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <p class="text-sm text-gray-600 mb-4">
+        We use essential cookies to make our site work. With your consent, we
+        may also use non-essential cookies to improve user experience and
+        analyze website traffic.
+      </p>
+
+      <div
+        class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2 justify-end"
+      >
+        <button
+          id="reject-cookies"
+          class="px-4 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 transition-colors text-sm"
+        >
+          Reject
+        </button>
+        <button
+          id="accept-cookies"
+          class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition-colors text-sm"
+        >
+          Accept All
+        </button>
+      </div>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -3519,5 +3573,55 @@
         handleNavbar();
       });
       </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Check if user has already made a cookie choice
+        if (!localStorage.getItem("cookieConsent")) {
+          // Show the cookie consent box with a slight delay
+          setTimeout(function () {
+            const cookieBox = document.getElementById("cookie-consent-box");
+            cookieBox.style.display = "block";
+            // Add animation
+            setTimeout(() => {
+              cookieBox.classList.add("translate-y-0");
+            }, 100);
+          }, 1000);
+        }
+
+        // Accept cookies
+        document
+          .getElementById("accept-cookies")
+          .addEventListener("click", function () {
+            localStorage.setItem("cookieConsent", "accepted");
+            hideCookieBox();
+            // Here you would enable all cookies
+          });
+
+        // Reject non-essential cookies
+        document
+          .getElementById("reject-cookies")
+          .addEventListener("click", function () {
+            localStorage.setItem("cookieConsent", "rejected");
+            hideCookieBox();
+            // Here you would disable non-essential cookies
+          });
+
+        // Close button
+        document
+          .getElementById("close-cookie-box")
+          .addEventListener("click", function () {
+            hideCookieBox();
+          });
+
+        function hideCookieBox() {
+          const cookieBox = document.getElementById("cookie-consent-box");
+          cookieBox.classList.add("translate-y-8", "opacity-0");
+          setTimeout(() => {
+            cookieBox.style.display = "none";
+          }, 300);
+        }
+      });
+    </script>
   </body>
 </html>
