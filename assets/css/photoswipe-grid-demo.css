@@ -1,0 +1,36 @@
+/* Custom styles for PhotoSwipe grid gallery demo */
+#gallery-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+#gallery-modal.active {
+  display: flex;
+}
+#gallery-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10001;
+}
+#gallery-grid {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+#gallery-grid img {
+  transition: transform 0.2s;
+}
+#gallery-grid img:hover {
+  transform: scale(1.05);
+}

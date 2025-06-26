@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoomable Image Canvas</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f3f4f6;
+        font-family: sans-serif;
+      }
+      .canvas-container {
+        width: 80vw;
+        height: 80vh;
+        overflow: hidden;
+        border: 2px solid #ccc;
+        border-radius: 1rem;
+        background: white;
+        cursor: grab;
+        position: relative;
+      }
+      .canvas-container:active {
+        cursor: grabbing;
+      }
+      .zoomable {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .instruction {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        pointer-events: none;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas-container" id="canvasContainer">
+      <div class="instruction">
+        Scroll to zoom. Hold and drag to move in any direction.
+      </div>
+      <img
+        id="zoomImage"
+        class="zoomable"
+        src="./assets/images/dashboardmain.png"
+        alt="Zoomable"
+        draggable="false"
+      />
+    </div>
+
+    <script>
+      const zoomImage = document.getElementById("zoomImage");
+      const container = document.getElementById("canvasContainer");
+      let scale = 1;
+      let isDragging = false;
+      let startX, startY;
+      let translateX = 0,
+        translateY = 0;
+
+      container.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        const delta = event.deltaY;
+        scale -= delta * 0.001;
+        scale = Math.min(Math.max(scale, 0.5), 3);
+        updateTransform();
+      });
+
+      container.addEventListener("mousedown", (event) => {
+        isDragging = true;
+        startX = event.clientX;
+        startY = event.clientY;
+        container.style.cursor = "grabbing";
+      });
+
+      container.addEventListener("mousemove", (event) => {
+        if (!isDragging) return;
+        const dx = event.clientX - startX;
+        const dy = event.clientY - startY;
+        translateX += dx;
+        translateY += dy;
+        startX = event.clientX;
+        startY = event.clientY;
+        updateTransform();
+      });
+
+      container.addEventListener("mouseup", () => {
+        isDragging = false;
+        container.style.cursor = "grab";
+      });
+
+      container.addEventListener("mouseleave", () => {
+        isDragging = false;
+        container.style.cursor = "grab";
+      });
+
+      function updateTransform() {
+        zoomImage.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+      }
+    </script>
+  </body>
+</html>

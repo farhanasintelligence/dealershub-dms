@@ -24,13 +24,17 @@
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+
+    <!-- Data AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Navbar -->
     <div
-      class="flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4"
-      style="opacity: 1; transform: none"
-    >
+    id="main-navbar"
+    class="navbar-hidden flex max-w-fit fixed top-7 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4 transition-all duration-500"
+    style="opacity: 0; pointer-events: none; transform: translateY(-40px);"
+  >
       <a
         class="relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
         href="/"
@@ -108,6 +112,405 @@
       </button>
     </div>
 
+    <!-- NEW HERO SECTION START -->
+    <section class="relative pt-24 overflow-hidden h-screen">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 h-full flex flex-col items-center justify-center"
+      >
+      <!-- UK CAR Registration Innput -->
+     
+        <!-- Main Heading -->
+        <div class="text-center mb-16 flex flex-col items-center gap-4">
+          <div class="flex items-center justify-center rounded-xl w-fit bg-[#00c714] px-4 py-2 text-sm font-medium text-white">
+            <div class=" flex items-center justify-center rounded-20">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.1948 18.7695C8.35471 18.8016 6.54643 18.2873 4.99862 17.2918C3.45081 16.2962 2.23298 14.864 1.49914 13.1763C0.765304 11.4885 0.54841 9.62112 0.875889 7.81013C1.20337 5.99915 2.06051 4.32594 3.33893 3.0021C4.61735 1.67826 6.25962 0.763246 8.05807 0.372764C9.85653 -0.0177184 11.7304 0.133872 13.4427 0.808364C15.155 1.48286 16.6288 2.64996 17.6778 4.16208C18.7268 5.6742 19.3038 7.46343 19.336 9.3035C19.3762 11.7702 18.4364 14.1521 16.7227 15.9267C15.009 17.7013 12.6613 18.7236 10.1948 18.7695Z" fill="white"></path><path d="M8.83983 12.2782C8.75836 12.2798 8.67739 12.2652 8.60158 12.2353C8.52578 12.2054 8.45664 12.1608 8.39815 12.1041L6.50496 10.2759C6.38993 10.1609 6.32468 10.0053 6.32326 9.84263C6.32183 9.67998 6.38434 9.52328 6.49733 9.40628C6.61032 9.28927 6.76475 9.22133 6.92735 9.21707C7.08995 9.21282 7.24771 9.2726 7.36666 9.38354L9.25986 11.2118C9.34809 11.297 9.40907 11.4065 9.43509 11.5264C9.46111 11.6462 9.451 11.7711 9.40605 11.8853C9.36109 11.9994 9.28331 12.0977 9.18252 12.1676C9.08174 12.2375 8.96248 12.276 8.83983 12.2782Z" fill="#00C514"></path><path d="M8.8385 12.2783C8.71585 12.2804 8.59532 12.2461 8.49216 12.1797C8.389 12.1134 8.30783 12.0179 8.25892 11.9054C8.21001 11.7929 8.19555 11.6684 8.21737 11.5477C8.23919 11.427 8.29631 11.3155 8.38151 11.2272L12.6474 6.80975C12.7624 6.69473 12.918 6.62948 13.0806 6.62805C13.2433 6.62663 13.4 6.68914 13.517 6.80213C13.634 6.91512 13.7019 7.06955 13.7062 7.23215C13.7104 7.39475 13.6507 7.55251 13.5397 7.67146L9.27384 12.0889C9.21737 12.1477 9.14983 12.1946 9.07511 12.2271C9.00039 12.2596 8.91998 12.277 8.8385 12.2783Z" fill="#00C514"></path></svg>
+            </div>
+            <span class="ml-1">Exceptional Vehicles, Expertly Curated in the Heart of Luton</span>
+          </div>
+          <h1
+            class="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 mb-6 leading-tight"
+          >
+            Your Ultimate Team<br />Management Solution
+          </h1>
+          <p class="max-w-3xl mx-auto text-xl text-gray-600 mb-12">
+            Welcome to Apalagi - Where Team Collaboration Meets Effortless
+            Productivity, and Inspiration Fuels Success
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href="#"
+              class="inline-block rounded-xl bg-indigo-600 px-8 py-4 text-center font-semibold text-white hover:bg-indigo-700 transition-colors"
+            >
+              Get Started
+            </a>
+            <a
+              href="#"
+              class="inline-block rounded-xl border border-indigo-600 px-8 py-4 text-center font-semibold text-indigo-600 hover:bg-gray-50 transition-colors"
+            >
+              Start Free Trial
+            </a>
+          </div>
+        </div>
+
+        <!-- Left Top Review -->
+        <div
+          class="review-card-container absolute left-36 top-28 animate-float-left-1"
+        >
+          <div
+            class="hero-review-card bg-white rounded-lg shadow-lg p-4 flex items-center min-w-[280px] max-w-[384px] border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex-shrink-0 mr-4">
+              <div
+                class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold"
+              >
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="User"
+                  class="w-full h-full object-cover rounded-full"
+                />
+              </div>
+            </div>
+            <div>
+              <p class="text-sm text-gray-600 mb-1">
+                All paperwork up to speed No messing around
+              </p>
+              <p class="font-semibold text-sm">Michael O. Bennett</p>
+              <span class="text-yellow-400 text-xl flex">
+                <svg
+                  class="size-4"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z"
+                    fill="#FFD700"
+                    stroke="#FFD700"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+
+                <svg
+                  class="size-4"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z"
+                    fill="#FFD700"
+                    stroke="#FFD700"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+
+                <svg
+                  class="size-4"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z"
+                    fill="#FFD700"
+                    stroke="#FFD700"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+
+                <svg
+                  class="size-4"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z"
+                    fill="#FFD700"
+                    stroke="#FFD700"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+
+                <svg
+                  class="size-4"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z"
+                    fill="#FFD700"
+                    stroke="#FFD700"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left Bottom Review -->
+        <div
+          class="review-card-container absolute left-36 bottom-36 animate-float-left-2"
+        >
+          <div
+            class="hero-review-card bg-white rounded-lg shadow-lg p-4 flex items-center min-w-[280px] max-w-[384px] border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex-shrink-0 mr-4">
+              <div
+                class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold"
+              >
+                <img
+                  src="https://randomuser.me/api/portraits/men/41.jpg"
+                  alt="User"
+                  class="w-full h-full object-cover rounded-full"
+                />
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold">Jason</h3>
+              <p class="text-sm text-gray-600">
+                Good customer service and the vans . Will Definitely recommend.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Top Review -->
+        <div
+          class="review-card-container absolute right-36 top-28 animate-float-right-1"
+        >
+          <div
+            class="hero-review-card bg-white rounded-lg shadow-lg p-4 flex items-center min-w-[280px] max-w-[384px] border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex-shrink-0 mr-4">
+              <div
+                class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold"
+              >
+                <img
+                  src="https://randomuser.me/api/portraits/men/22.jpg"
+                  alt="User"
+                  class="w-full h-full object-cover rounded-full"
+                />
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold">Eleanor Whitman</h3>
+              <p class="text-sm text-gray-600">
+                Bought a small van month ago and I am leaving review after
+                completing 3000 miles. Very happy with the van and this
+                dealership is highly recommended and trusted.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Bottom Review -->
+        <div
+          class="review-card-container absolute right-36 bottom-36 animate-float-right-2"
+        >
+          <div
+            class="hero-review-card bg-white rounded-lg shadow-lg p-4 flex items-center min-w-[280px] max-w-[384px] border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex-shrink-0 mr-4">
+              <div
+                class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold"
+              >
+                <img
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  alt="User"
+                  class="w-full h-full object-cover rounded-full"
+                />
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold">Samantha V. Chen</h3>
+              <p class="text-sm text-gray-600">
+                Bought a small van month ago and I am leaving review after
+                completing 3000 miles. Very happy with the van and this
+                dealership is highly recommended and trusted.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Social Media Sidebar -->
+        <div
+          class="absolute left-6 top-1/2 transform -translate-y-1/2 z-10 hidden md:block"
+        >
+          <div
+            class="flex flex-col items-center gap-2 bg-slate-300 bg-opacity-50 backdrop-blur-sm rounded-full p-2"
+          >
+            <!-- Facebook -->
+            <a
+              href="#"
+              class="group w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+            >
+              <svg
+                class="w-5 h-5 text-white group-hover:text-black"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                />
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="#"
+              class="group w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+            >
+              <svg
+                class="w-5 h-5 text-white group-hover:text-black"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                />
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="#"
+              class="group w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+            >
+              <svg
+                class="w-5 h-5 text-white group-hover:text-black"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </a>
+
+            <!-- TikTok -->
+            <a
+              href="#"
+              class="group w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+            >
+              <svg
+                class="w-5 h-5 text-white group-hover:text-black"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- NEW HERO SECTION END -->
+
+    <style>
+      /* Floating animations for review cards */
+      @keyframes float-left-1 {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(30px);
+        }
+      }
+
+      @keyframes float-left-2 {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(40px);
+        }
+      }
+
+      @keyframes float-right-1 {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-30px);
+        }
+      }
+
+      @keyframes float-right-2 {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-40px);
+        }
+      }
+
+      .animate-float-left-1 {
+        animation: float-left-1 6s ease-in-out infinite;
+      }
+
+      .animate-float-left-2 {
+        animation: float-left-2 8s ease-in-out infinite;
+      }
+
+      .animate-float-right-1 {
+        animation: float-right-1 7s ease-in-out infinite;
+      }
+
+      .animate-float-right-2 {
+        animation: float-right-2 9s ease-in-out infinite;
+      }
+
+      .hero-review-card {
+        transform: translateY(0);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .review-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* For smaller screens, adjust the positioning */
+      @media (max-width: 768px) {
+        .review-card-container {
+          position: relative !important;
+          margin-bottom: 1rem;
+          display: block;
+        }
+      }
+    </style>
+
     <!-- Hero Section -->
     <section class="relatve">
       <!-- Container -->
@@ -116,6 +519,7 @@
       >
         <!-- Heading Div -->
         <div
+          data-aos="fade-up"
           class="border border-indigo-600 p-1 w-[21rem] mx-auto rounded-full flex items-center justify-between mb-8"
         >
           <span class="font-inter text-xs font-medium text-gray-900 ml-3"
@@ -262,14 +666,21 @@
           </div>
         </div>
         <!-- Image Div -->
-        <div class="relative mx-auto h-[512px]">
-          <img
-            src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915d247ab06a755ee4aaee_magicpattern-KfFmwa7m5VQ-unsplash.jpg"
-            alt=""
+        <div class="relative mx-auto h-auto xl:h-[618px]">
+          <video
+            src="./assets/videos/dms-overview.mp4"
             class="inline-block h-full w-full rounded-xl object-cover sm:rounded-2xl"
-          />
+            autoplay
+            muted
+            playsinline
+            loop
+            disablepictureinpicture
+            controlslist="nodownload nofullscreen noremoteplayback"
+            tabindex="-1"
+            style="pointer-events: none"
+          ></video>
           <div
-            class="absolute bottom-0 left-4 right-0 top-4 -z-10 h-full w-full rounded-2xl bg-black"
+            class="absolute bottom-0 left-4 right-36 top-4 -z-10 h-full w-full rounded-2xl bg-black"
           ></div>
         </div>
       </div>
@@ -277,12 +688,12 @@
       <img
         src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63905b9f809b5c8180ce30c5_pattern-1.svg"
         alt=""
-        class="absolute bottom-0 left-0 right-auto top-auto -z-10 md:bottom-1/2 md:left-0 md:right-auto md:top-auto hidden md:block"
+        class="absolute bottom-0 left-36 right-auto top-auto -z-10 md:bottom-1/2 md:left-36 md:right-auto md:top-auto hidden md:block"
       />
       <img
         src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63905ba1538296b3f50a905e_pattern-2.svg"
         alt=""
-        class="absolute bottom-auto left-auto right-0 top-0 -z-10 hidden md:block"
+        class="absolute bottom-auto left-auto right-36 top-0 -z-10 hidden md:block"
       />
     </section>
 
@@ -926,6 +1337,217 @@
       </div>
     </section>
 
+    <!-- Book Appointment Button -->
+    <button
+      id="open-appointment-modal"
+      class="bg-indigo-600 text-white px-6 py-2 rounded mt-8"
+    >
+      Book an Appointment
+    </button>
+
+    <!-- Appointment Modal -->
+    <div
+      id="appointment-modal"
+      class="fixed inset-0 flex items-center justify-center bg-black/30 z-50"
+      style="display: none"
+    >
+      <div class="bg-white rounded-2xl shadow-xl w-full max-w-2xl p-0 relative">
+        <!-- Close Button -->
+        <button
+          id="close-appointment-modal"
+          class="absolute top-4 right-4 text-gray-600 hover:text-red-600 text-2xl"
+          title="Close"
+          type="button"
+        >
+          &times;
+        </button>
+        <!-- Back Button -->
+        <button
+          id="back-btn"
+          class="absolute top-4 left-4 text-gray-600 hover:text-indigo-600 flex items-center"
+          style="display: none"
+          type="button"
+        >
+          &lt; Back
+        </button>
+
+        <!-- Step 1: Date & Time -->
+        <div id="step-1" class="step-content">
+          <div class="flex flex-col md:flex-row">
+            <div class="p-6 flex-1 flex flex-col items-center">
+              <img
+                src="./assets/images/appoint-car.jpg"
+                alt="Car"
+                class="rrounded-md shadow-sm h-[200px] object-cover object-center w-full mb-4"
+              />
+              <div>
+                <h2 class="font-bold text-lg mb-2">Appointment details</h2>
+                <p class="text-sm text-gray-600 mb-2">
+                  Estimated Time: 30 - 60 minutes
+                </p>
+                <p class="text-xs text-gray-500">
+                  This appointment will be at our main showroom in Chelmsford,
+                  Essex. Once confirmed, you'll receive an email with directions
+                  and any additional details to help you plan your visit.
+                  <br /><br />
+                  If you need to reschedule, kindly provide at least 24 hours’
+                  notice so we can assist you in arranging an alternative time.
+                </p>
+              </div>
+            </div>
+            <div class="flex-1 p-6 border-l">
+              <h2 class="font-bold text-xl mb-4">Book an Appointment</h2>
+              <div class="mb-4">
+                <label class="block mb-2 font-medium">Select date</label>
+                <select id="appointment-date" class="w-full border rounded p-2">
+                  <option value="">Select...</option>
+                  <option value="2024-06-03">Tue 03/06</option>
+                  <option value="2024-06-04">Wed 04/06</option>
+                </select>
+              </div>
+              <div class="mb-4">
+                <label class="block mb-2 font-medium">Select time</label>
+                <select id="appointment-time" class="w-full border rounded p-2">
+                  <option value="">Select...</option>
+                  <option value="15:00">15:00 pm</option>
+                  <option value="15:30">15:30 pm</option>
+                  <option value="16:00">16:00 pm</option>
+                </select>
+              </div>
+              <button
+                id="next-btn-1"
+                class="w-full bg-indigo-600 text-white py-2 rounded disabled:opacity-50"
+                type="button"
+                disabled
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: User Details -->
+        <div id="step-2" class="step-content" style="display: none">
+          <div class="flex flex-col md:flex-row">
+            <div class="p-6 flex-1 flex flex-col items-center">
+              <img
+                src="./assets/images/appoint-car.jpg"
+                alt="Car"
+                class="rounded-lg w-64 mb-4"
+              />
+              <div>
+                <h2 class="font-bold text-lg mb-2">Appointment details</h2>
+                <p class="text-sm text-gray-600 mb-2">
+                  Estimated Time: 30 - 60 minutes
+                </p>
+                <p class="text-xs text-gray-500">
+                  This appointment will be at our main showroom in Chelmsford,
+                  Essex. Once confirmed, you'll receive an email with directions
+                  and any additional details to help you plan your visit.
+                  <br /><br />
+                  If you need to reschedule, kindly provide at least 24 hours’
+                  notice so we can assist you in arranging an alternative time.
+                </p>
+              </div>
+            </div>
+            <div class="flex-1 p-6 border-l">
+              <h2 class="font-bold text-xl mb-4">Book an Appointment</h2>
+              <form id="user-details-form">
+                <input
+                  id="first-name"
+                  required
+                  placeholder="First Name*"
+                  class="w-full border rounded p-2 mb-3"
+                />
+                <input
+                  id="last-name"
+                  required
+                  placeholder="Last Name*"
+                  class="w-full border rounded p-2 mb-3"
+                />
+                <input
+                  id="email"
+                  required
+                  type="email"
+                  placeholder="Email Address*"
+                  class="w-full border rounded p-2 mb-3"
+                />
+                <input
+                  id="mobile"
+                  required
+                  placeholder="Mobile Number*"
+                  class="w-full border rounded p-2 mb-3"
+                />
+                <button
+                  type="submit"
+                  class="w-full bg-indigo-600 text-white py-2 rounded"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Confirmation -->
+        <div id="step-3" class="step-content" style="display: none">
+          <div class="flex flex-col md:flex-row">
+            <div class="p-6 flex-1 flex flex-col items-center">
+              <img
+                src="./assets/images/appoint-car.jpg"
+                alt="Car"
+                class="rounded-lg w-64 mb-4"
+              />
+              <div>
+                <h2 class="font-bold text-lg mb-2">Appointment details</h2>
+                <p class="text-sm text-gray-600 mb-2">
+                  Estimated Time: 30 - 60 minutes
+                </p>
+                <p class="text-xs text-gray-500">
+                  This appointment will be at our main showroom in Chelmsford,
+                  Essex. Once confirmed, you'll receive an email with directions
+                  and any additional details to help you plan your visit.
+                  <br /><br />
+                  If you need to reschedule, kindly provide at least 24 hours’
+                  notice so we can assist you in arranging an alternative time.
+                </p>
+              </div>
+            </div>
+            <div class="flex-1 p-6 border-l">
+              <h2 class="font-bold text-xl mb-4">Appointment confirmation</h2>
+              <p class="mb-4">
+                Congratulations, your appointment has been confirmed for<br />
+                <span class="font-bold" id="confirmation-details"></span>
+              </p>
+              <button class="w-full bg-green-600 text-white py-2 rounded mb-4">
+                Secure vehicle
+              </button>
+              <div>
+                <h3 class="font-bold mb-2">Why Secure your vehicle?</h3>
+                <ul class="list-disc ml-5 text-sm text-gray-700">
+                  <li>
+                    Guaranteed Availability: Avoid disappointment by ensuring
+                    the car is reserved exclusively for you.
+                  </li>
+                  <li>
+                    Peace of Mind: Relax knowing your appointment is locked in
+                    and ready to go!
+                  </li>
+                  <li>
+                    Tailored Preparation: Our team will ensure the car is
+                    prepped and personalised for your arrival.
+                  </li>
+                </ul>
+                <p class="mt-2 text-xs text-gray-500">
+                  Securing your vehicle takes less than a minute and gives you
+                  total confidence in your appointment experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Marquee Tag -->
     <section class="py-20">
       <div
@@ -1184,11 +1806,16 @@
                   </div>
                 </div>
               </div>
-              <div class="h-full md:order-first">
+              <div
+                class="md:order-first w-full h-80 overflow-hidden border border-gray-400 group rounded shadow-lg relative"
+                id="dashboard-container"
+              >
                 <img
-                  src="./assets/images/dashboardmain.png"
-                  alt="#_"
-                  class="bg-gray-200 shadow-box shadow-gray-500/30 overflow-hidden aspect-square w-full h-full object-none object-left-top"
+                  src="./assets/images/dashboard.png"
+                  alt="Full Page Screenshot"
+                  class="w-full h-auto min-h-[160%] transition-transform duration-300"
+                  id="dashboard-image"
+                  style="object-position: top; transform-origin: top left"
                 />
               </div>
             </div>
@@ -2740,7 +3367,7 @@
                         stroke-width="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                      ></path>
+                      ></path>`
                     </svg>
                     <span>Sunday Closed</span>
                   </li>
@@ -2781,10 +3408,116 @@
       </div>
     </footer>
 
+    <div class="lg:mx-auto lg:w-[90vw] lg:max-w-screen-2xl"> 
+      <div class="mb-10">
+        <div class="grid grid-cols-1 gap-x-4 rounded-[2rem] bg-white p-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 relative">
+          <!-- Social Media Sidebar -->
+          <div class="absolute left-6 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
+            <div class="flex flex-col items-center space-y-4 bg-slate-300 bg-opacity-50 backdrop-blur-sm rounded-full py-4 px-2">
+              <!-- Facebook -->
+              <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                  <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+                </svg>
+              </a>
+              
+              <!-- LinkedIn -->
+              <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
+                </svg>
+              </a>
+              
+              <!-- Instagram -->
+              <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                </svg>
+              </a>
+              
+              <!-- TikTok -->
+              <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path fill="currentColor" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <!-- First Column -->
+          <div class="p-2 xl:col-span-1 2xl:col-span-1">
+            <div class="mb-7 flex items-center justify-between">
+              <div class="mb-8 flex items-center justify-between">
+                <div class="flex items-center">
+                  <h2 class="ml-2 font-urbanist text-2xl font-semibold lg:text-3xl">Contacts</h2>
+                </div>
+              </div>
+              <button class="justify-center whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 flex items-center gap-2 rounded-xl bg-[#FFF1F1] px-4 py-3 text-sm text-primary transition-all duration-200 hover:bg-primary hover:text-white">
+                <div class="flex items-center justify-center rounded-20 undefined">
+                  <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.09488 15.6112C12.9802 15.1702 15.9986 11.8814 15.9986 7.88979C15.9986 3.59761 12.5086 0.118103 8.20341 0.118103C3.89824 0.118103 0.408203 3.59761 0.408203 7.88979C0.408203 11.8353 3.35715 15.094 7.17745 15.5948L8.13891 18.4705L9.09488 15.6112Z" fill="#FF3448"></path>
+                    <ellipse cx="8.20451" cy="7.88978" rx="4.8256" ry="4.81105" fill="#FFF3F4"></ellipse>
+                  </svg>
+                </div>
+                <span class="inter text-sm font-semibold">Get directions</span>
+              </button>
+            </div>
+            
+            <div class="inter flex items-center justify-between rounded-2xl bg-secondary p-3.5 text-sm text-primary-foreground">
+              <span class="font-normal"> Phone</span>
+              <button class="flex items-center font-medium hover:underline undefined">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.7955 9.40683L10.416 9.78421C10.416 9.78421 9.51381 10.6812 7.0513 8.23273C4.58879 5.7842 5.49095 4.88717 5.49095 4.88717L5.72996 4.64951C6.31876 4.06406 6.37427 3.12412 5.86057 2.43793L4.80974 1.03426C4.17394 0.184956 2.94533 0.0727636 2.21657 0.797383L0.908572 2.09796C0.547222 2.45726 0.305074 2.92302 0.334438 3.4397C0.40956 4.76154 1.00763 7.60557 4.34483 10.9238C7.88382 14.4427 11.2044 14.5826 12.5623 14.456C12.9918 14.4159 13.3653 14.1972 13.6663 13.8979L14.8501 12.7208C15.6492 11.9263 15.4239 10.5641 14.4015 10.0083L12.8094 9.14287C12.1381 8.77793 11.3202 8.88513 10.7955 9.40683Z" fill="currentColor"></path>
+                </svg>
+                <span class="ml-2">+97143772503</span>
+              </button>
+            </div>
+            
+            <div class="my-6">
+              <p class="urbanist text-xl font-semibold text-primary-foreground">Dubai Showroom</p>
+              <p class="inter pt-1 font-medium text-[#696969]">Showroom 17, 18 &amp; 20, Al Asayel Street, Al Quoz Ind 1, Dubai, United Arab Emirates</p>
+              <div class="inter flex items-start justify-between pt-4 text-sm text-primary-foreground">
+                <div>
+                  <span class="font-normal">Working hours</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-medium">Sun-Sat : 9 AM - 10 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+
+    <!-- Data AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="./assets/index.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const navbar = document.getElementById('main-navbar');
+        let lastScrollY = window.scrollY;
+      
+        function handleNavbar() {
+          if (window.scrollY > 300) {
+            navbar.classList.add('show-navbar');
+            navbar.classList.remove('navbar-hidden');
+          } else {
+            navbar.classList.remove('show-navbar');
+            navbar.classList.add('navbar-hidden');
+          }
+        }
+      
+        window.addEventListener('scroll', handleNavbar);
+        // Initial check
+        handleNavbar();
+      });
+      </script>
   </body>
 </html>
