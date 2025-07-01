@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Inquiry Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-gray-50 py-8">
+    <div class="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+      <!-- Car Details Section -->
+      <div class="mb-8">
+        <div class="relative mb-4">
+          <div
+            class="font-bold uppercase w-fit text-black text-xl bg-gray-100 rounded-lg py-2 px-3 mb-3 border"
+          >
+            SH18YWA
+          </div>
+          <h3 class="text-3xl font-bold mb-2">BMW 1 Series</h3>
+          <p class="text-base font-medium leading-5 text-gray-700">
+            1.5 116d ED Plus Hatchback 5dr Diesel Manual Euro 6 (s/s) (116 ps)
+          </p>
+        </div>
+
+        <!-- Car Specifications -->
+        <div class="flex gap-2 flex-wrap items-start text-sm my-4">
+          <div
+            class="gap-2 flex-1 min-w-[120px] justify-center text-white flex items-center bg-black py-2 px-2 rounded-lg"
+          >
+            <span>⚡</span>
+            <span>1,560</span>
+          </div>
+          <div
+            class="gap-2 flex-1 min-w-[120px] justify-center text-white flex items-center bg-black py-2 px-2 rounded-lg"
+          >
+            <span>⛽</span>
+            <span>Diesel</span>
+          </div>
+          <div
+            class="gap-2 flex-1 min-w-[120px] justify-center text-white flex items-center bg-black py-2 px-2 rounded-lg"
+          >
+            <span>🔧</span>
+            <span>Automatic</span>
+          </div>
+          <div
+            class="gap-2 flex-1 min-w-[120px] justify-center text-white flex items-center bg-black py-2 px-2 rounded-lg"
+          >
+            <span>📊</span>
+            <span>85,500</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="space-y-4" id="carInquiryForm">
+        <div class="grid gap-3 grid-cols-2">
+          <div class="col-span-1">
+            <label for="name" class="block mb-2 text-sm font-medium text-black"
+              >Name*</label
+            >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+              class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 border border-gray-300"
+              required
+            />
+          </div>
+
+          <div class="col-span-1">
+            <label for="email" class="block mb-2 text-sm font-medium text-black"
+              >Email*</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 border border-gray-300"
+              required
+            />
+          </div>
+
+          <div class="col-span-2">
+            <label for="phone" class="block mb-2 text-sm font-medium text-black"
+              >Phone*</label
+            >
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Enter your phone number"
+              class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 border border-gray-300"
+              required
+            />
+          </div>
+
+          <div class="col-span-2">
+            <label
+              for="address"
+              class="block mb-2 text-sm font-medium text-black"
+              >Address*</label
+            >
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Enter your address"
+              class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 border border-gray-300"
+              required
+            />
+          </div>
+
+          <div class="col-span-2">
+            <label
+              for="message"
+              class="block mb-2 text-sm font-medium text-black"
+              >Message*</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Write your message here"
+              class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 border border-gray-300"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Image Upload Section -->
+          <div class="col-span-2">
+            <label class="block mb-2 text-sm font-medium text-black"
+              >Upload Images</label
+            >
+
+            <!-- Upload Area -->
+            <div
+              id="uploadArea"
+              class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center transition-colors hover:border-blue-500 hover:bg-gray-50"
+            >
+              <div class="mb-3">📤</div>
+              <p class="text-sm text-gray-600 mb-2">
+                Drag and drop images here, or
+                <label
+                  for="fileInput"
+                  class="text-blue-500 hover:text-blue-700 cursor-pointer font-medium"
+                  >browse</label
+                >
+              </p>
+              <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+              <input
+                id="fileInput"
+                type="file"
+                multiple
+                accept="image/*"
+                class="hidden"
+              />
+            </div>
+
+            <!-- Image Previews -->
+            <div id="imagePreview" class="mt-4 hidden">
+              <h4 class="text-sm font-medium text-black mb-3">
+                Uploaded Images (<span id="imageCount">0</span>)
+              </h4>
+              <div
+                id="imageGrid"
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-end gap-3 pt-4">
+          <button
+            type="button"
+            class="px-4 py-3 rounded-xl bg-black text-white text-md font-semibold flex items-center gap-2 hover:bg-gray-900 transition"
+          >
+            ← Back
+          </button>
+          <button
+            type="submit"
+            class="px-4 py-3 rounded-xl bg-green-600 text-white text-md font-semibold flex items-center gap-2 hover:bg-green-700 transition"
+          >
+            Next →
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      class ImageUploader {
+        constructor() {
+          this.uploadedImages = [];
+          this.initializeElements();
+          this.attachEventListeners();
+        }
+
+        initializeElements() {
+          this.uploadArea = document.getElementById("uploadArea");
+          this.fileInput = document.getElementById("fileInput");
+          this.imagePreview = document.getElementById("imagePreview");
+          this.imageGrid = document.getElementById("imageGrid");
+          this.imageCount = document.getElementById("imageCount");
+        }
+
+        attachEventListeners() {
+          // File input change
+          this.fileInput.addEventListener("change", (e) => {
+            this.handleFiles(e.target.files);
+          });
+
+          // Drag and drop events
+          this.uploadArea.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            this.uploadArea.classList.add("border-blue-500", "bg-blue-50");
+          });
+
+          this.uploadArea.addEventListener("dragleave", (e) => {
+            e.preventDefault();
+            this.uploadArea.classList.remove("border-blue-500", "bg-blue-50");
+          });
+
+          this.uploadArea.addEventListener("drop", (e) => {
+            e.preventDefault();
+            this.uploadArea.classList.remove("border-blue-500", "bg-blue-50");
+            this.handleFiles(e.dataTransfer.files);
+          });
+
+          // Form submission
+          document
+            .getElementById("carInquiryForm")
+            .addEventListener("submit", (e) => {
+              e.preventDefault();
+              this.handleSubmit();
+            });
+        }
+
+        handleFiles(files) {
+          Array.from(files).forEach((file) => {
+            if (file.type.startsWith("image/")) {
+              const id = Math.random().toString(36).substr(2, 9);
+              const reader = new FileReader();
+
+              reader.onload = (e) => {
+                const imageData = {
+                  id: id,
+                  file: file,
+                  preview: e.target.result,
+                  name: file.name,
+                };
+
+                this.uploadedImages.push(imageData);
+                this.renderImagePreview(imageData);
+                this.updateImageCount();
+              };
+
+              reader.readAsDataURL(file);
+            }
+          });
+        }
+
+        renderImagePreview(imageData) {
+          const imageContainer = document.createElement("div");
+          imageContainer.className = "relative group";
+          imageContainer.setAttribute("data-id", imageData.id);
+
+          imageContainer.innerHTML = `
+                    <div class="aspect-square rounded-lg overflow-hidden bg-gray-100">
+                        <img src="${imageData.preview}" alt="Preview" class="w-full h-full object-cover">
+                    </div>
+                    <button type="button" class="remove-btn absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 shadow-lg hover:bg-red-600 transition-colors opacity-0 group-hover:opacity-100">
+                        ✕
+                    </button>
+                `;
+
+          // Add remove functionality
+          const removeBtn = imageContainer.querySelector(".remove-btn");
+          removeBtn.addEventListener("click", () => {
+            this.removeImage(imageData.id);
+          });
+
+          this.imageGrid.appendChild(imageContainer);
+          this.imagePreview.classList.remove("hidden");
+        }
+
+        removeImage(id) {
+          // Remove from array
+          this.uploadedImages = this.uploadedImages.filter(
+            (img) => img.id !== id
+          );
+
+          // Remove from DOM
+          const imageElement = document.querySelector(`[data-id="${id}"]`);
+          if (imageElement) {
+            imageElement.remove();
+          }
+
+          this.updateImageCount();
+
+          // Hide preview section if no images
+          if (this.uploadedImages.length === 0) {
+            this.imagePreview.classList.add("hidden");
+          }
+        }
+
+        updateImageCount() {
+          this.imageCount.textContent = this.uploadedImages.length;
+        }
+
+        handleSubmit() {
+          const formData = new FormData();
+
+          // Add form fields
+          const form = document.getElementById("carInquiryForm");
+          const formElements = form.elements;
+
+          for (let element of formElements) {
+            if (element.name && element.type !== "file") {
+              formData.append(element.name, element.value);
+            }
+          }
+
+          // Add uploaded images
+          this.uploadedImages.forEach((imageData, index) => {
+            formData.append(`image_${index}`, imageData.file);
+          });
+
+          // Here you would typically send the formData to your server
+          console.log("Form submitted with data:", formData);
+          console.log("Uploaded images:", this.uploadedImages);
+
+          alert("Form submitted successfully! Check console for details.");
+        }
+      }
+
+      // Initialize the image uploader when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        new ImageUploader();
+      });
+    </script>
+  </body>
+</html>

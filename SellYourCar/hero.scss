@@ -1,0 +1,267 @@
+@use "_index.scss" as *;
+@use "sass:math";
+@use "~@THC/styles/core";
+
+@use "~@THC/styles/color";
+
+@use "~@THC/styles/breakpoints";
+
+@use "~@THC/styles/fluid";
+
+@use "./../../../../../styles/breakpoints" as appBreakpoints;
+
+@use "../../../../../../shared/styles/header.scss" as helpers;
+
+@use "~@THC/styles/core" as thc-core;
+
+@mixin calculateCarSize($divide: 1) {
+  height: math.div((core.$space * 26.25), $divide); // 210
+  width: math.div((core.$space * 52.5), $divide); // 420
+}
+
+/**
+* IMPORTANT
+* If altering the height of `.contentWrapper` ensure you alter the min-heights to
+* prevent Google Pagespeed from penalising us for Cumlative Layout Shift
+*/
+
+$bottomChevronHeightMobile: 45vw;
+$bottomChevronMinHeightMobile: core.$space * 32.5;
+
+$bottomChevronHeightTabletMobile: 40vw;
+$bottomChevronMinHeightTabletMobile: core.$space * 50;
+
+.homepageHeroWrapper {
+  margin-top: (core.$space * 16);
+  position: relative;
+
+  @include breakpoints.minTabletMobile {
+    padding-bottom: core.$space-48;
+  }
+
+  @include breakpoints.minTablet {
+    min-height: auto;
+    padding-bottom: 0;
+  }
+}
+
+.homepageHero {
+  --hero-inset: #{core.$space-16};
+
+  margin: -(core.$space * 12) auto core.$space-48;
+  max-width: 900px;
+  position: relative;
+  width: calc(100% - var(--hero-inset) * 2);
+
+  &.mileageTransition {
+    animation: fadeOut 0.24s ease 0s forwards;
+  }
+
+  @include breakpoints.minTabletMobile {
+    --hero-inset: #{core.$space-24};
+
+    display: grid;
+    margin-bottom: 0;
+  }
+
+  @include breakpoints.minTablet {
+    grid-template-columns: thc-core.$space * 90 1fr;
+    max-width: thc-core.$space * 144;
+  }
+}
+
+.homepageImageWrapper {
+  border-radius: core.$space-16;
+  filter: var(--hero-filter, url("#brand-triangle-rounding"));
+  margin: core.$space-4 0 0;
+  padding: 0 core.$space-16 core.$space-64;
+  pointer-events: none;
+  position: relative;
+  user-select: none;
+  z-index: 1;
+
+  &::after {
+    background-color: var(--thc-color-primary-yellow);
+    clip-path: var(--y-home-triangle-motif);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  @include breakpoints.betweenMinMax("tabletMobile", "tablet") {
+    display: none;
+  }
+
+  > .staticCar {
+    height: auto;
+    left: 50%;
+    max-width: 600px;
+    position: relative;
+    transform: translateX(-50%);
+    width: 110%;
+    z-index: 1;
+  }
+
+  .desktopArrow {
+    display: none;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+
+  @include breakpoints.minTabletMobile {
+    display: none;
+  }
+
+  @include breakpoints.minTablet {
+    align-items: flex-start;
+    display: flex;
+    filter: none;
+    flex-direction: column;
+
+    &::after {
+      display: none;
+    }
+
+    > .staticCar {
+      left: auto;
+      margin: auto;
+      max-width: thc-core.$space * 98;
+      transform: translateX(-22%);
+      width: 260%;
+    }
+
+    .desktopArrow {
+      display: block;
+    }
+  }
+}
+
+.desktopArrow {
+  &.animating {
+    overflow: visible;
+
+    path {
+      animation: desktopArrowAnimation 1s;
+      transform-origin: 0% 0%;
+
+      &:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+    }
+  }
+}
+
+@keyframes desktopArrowAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(50vw);
+  }
+
+  50.001% {
+    transform: translateX(-600px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+:root {
+  --y-home-triangle-size: 60px;
+  --y-home-triangle-motif: polygon(
+    0% 0%,
+    100% 0,
+    100% calc(100% - var(--y-home-triangle-size)),
+    50% 100%,
+    0 calc(100% - var(--y-home-triangle-size))
+  );
+  --x-home-triangle-size: 96px;
+  --x-home-triangle-motif: polygon(
+    0% 0%,
+    calc(100% - var(--x-home-triangle-size)) 0%,
+    100% 50%,
+    calc(100% - var(--x-home-triangle-size)) 100%,
+    0% 100%
+  );
+}
+
+.homepageContentWrapper {
+  filter: var(--hero-filter, url("#brand-triangle-rounding"));
+
+  label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  > div {
+    --block-padding: #{fluid.create(thc-core.$space-24, thc-core.$space-64)};
+
+    background-color: var(--thc-color-primary-yellow);
+    border-radius: core.$space-16 core.$space-16 0 0;
+    clip-path: var(--y-home-triangle-motif);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: var(--block-padding) core.$space-16 var(--y-home-triangle-size);
+  }
+
+  @include breakpoints.minTabletMobile() {
+    position: relative;
+    z-index: 1;
+
+    > div {
+      --hero-input-max-width: 100%;
+
+      border-radius: core.$space-16 0 0 core.$space-16;
+      clip-path: var(--x-home-triangle-motif);
+      justify-content: center;
+      min-height: calc(var(--hero-min-height) + (var(--block-padding) * 2));
+      padding-bottom: var(--block-padding);
+      padding-left: core.$space-48;
+      padding-right: var(--x-home-triangle-size);
+    }
+  }
+
+  @media (min-width: 1120px) {
+    > div {
+      padding-left: #{fluid.create(48, 56, 1120, 1200)};
+    }
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

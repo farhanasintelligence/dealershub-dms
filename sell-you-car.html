@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>DMS | Dealers Hub</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Alpine JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- Data AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div class="overflow-hidden">
+      <div
+        class="container mx-auto mt-12 mb-8 bg-[#ffe04a] rounded-3xl p-8 md:p-16 relative shadow-lg sale-hero"
+      >
+        <img
+          class="sale-left-img absolute -left-56 top-1/2 -translate-y-1/2 w-80 md:w-96 object-contain rounded-3xl z-0"
+          src="./assets/images/left-car-sale.webp"
+          alt=""
+        />
+        <div
+          class="min-h-fit max-w-4xl mx-auto flex flex-col justify-center items-center"
+        >
+          <!-- Step 1 -->
+          <div class="hidden">
+            <div
+              class="flex flex-col justify-center items-center z-10 relative"
+            >
+              <h2
+                class="text-8xl font-black text-center uppercase tracking-tighter text-balance mb-4"
+              >
+                Sell My Car
+              </h2>
+
+              <p
+                class="mb-6 text-gray-800 text-base md:text-lg max-w-[49ch] text-center"
+              >
+                <span class="font-bold">Get a free valuation</span>, the best
+                offer from 500+ dealers, and free home collection with same-day
+                payment.
+              </p>
+              <form
+                class="flex flex-col sm:flex-row gap-3 mb-6"
+                autocomplete="off"
+                onsubmit="return false;"
+              >
+                <!-- Input with flag -->
+                <input type="text" id="regPlateFront" placeholder="Reg No" />
+
+                <div class="flex items-center relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-auto h-9 text-black pr-2 absolute top-4 left-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m12 14 4-4" />
+                    <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+                  </svg>
+                  <input
+                    type="text"
+                    id="mileageInput"
+                    placeholder="Mileage"
+                    maxlength="10"
+                    class="flex-1 outline-none text-sm"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="px-8 py-4 rounded-xl bg-black text-white text-md font-semibold flex items-center gap-2 hover:bg-gray-900 transition whitespace-nowrap"
+                >
+                  Value your car
+                  <svg
+                    class="w-5 h-5 ml-1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 12h14m-7-7l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </form>
+              <div class="flex items-center gap-2 mt-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20"
+                  width="171"
+                  viewBox="0 0 171 20"
+                  class="atds-svg h-3 w-auto"
+                >
+                  <title>Autotrader Logo</title>
+                  <g fill="none" fill-rule="evenodd" data-testid="at-logo-cars">
+                    <path
+                      fill="#0C1233"
+                      d="M149.323 10.483c.434-2.115 1.74-3.203 3.572-3.203s3.138 1.088 3.572 3.203h-7.144Zm7.204 4.757c-.776 1.213-1.802 1.743-3.26 1.743-2.299 0-3.727-1.275-4.036-3.763h10.154c.405 0 .747-.435.747-.87v-.25c0-5.567-3.852-7.807-7.237-7.807-3.385 0-7.236 2.24-7.236 7.807 0 5.568 3.726 7.87 7.546 7.87 2.641 0 5.404-1.15 6.739-4.042l-3.417-.685v-.003Zm6.118 4.355h3.418V12.69c0-4.012 2.141-4.665 3.602-4.852.713-.093 1.335-.093 1.335-.093V4.418c-.125-.093-.806-.125-1.181-.125-.746 0-1.707.125-2.578.747a3.523 3.523 0 0 0-1.398 2.053l-.622-1.928c-.092-.31-.404-.497-.684-.497h-1.894v14.93l.002-.003Zm-27.423-2.55c-2.454 0-4.441-2.207-4.441-4.915 0-2.707 1.987-4.915 4.441-4.915 2.454 0 4.411 2.178 4.441 4.853v.125c-.03 2.675-2.02 4.852-4.441 4.852Zm-.714 2.925c2.142 0 3.882-.84 5.125-2.207l.249 1.245c.063.31.405.59.714.59h2.516l-.03-7.465.03-12.13h-2.763c-.372 0-.714.217-.714.652v5.848c-1.243-1.368-2.98-2.208-5.125-2.208-4.41 0-7.236 3.67-7.236 7.838 0 4.167 2.826 7.837 7.236 7.837h-.002Zm-17.486-2.925c-2.454 0-4.441-2.207-4.441-4.915 0-2.707 1.987-4.915 4.441-4.915 2.454 0 4.411 2.178 4.441 4.853v.125c-.03 2.675-2.02 4.852-4.441 4.852Zm-.714 2.925c2.142 0 3.882-.84 5.125-2.207l.249 1.245c.063.31.405.59.714.59h2.517l-.03-7.465.03-7.465h-2.517c-.309 0-.651.28-.714.59l-.249 1.245c-1.243-1.368-2.981-2.208-5.125-2.208-4.411 0-7.236 3.67-7.236 7.838 0 4.167 2.825 7.837 7.236 7.837Zm-16.802-.375h3.418V12.69c0-4.012 2.141-4.665 3.602-4.852.713-.093 1.335-.093 1.335-.093V4.418c-.125-.093-.806-.125-1.181-.125-.746 0-1.707.125-2.578.747a3.523 3.523 0 0 0-1.398 2.053l-.622-1.928c-.092-.31-.404-.497-.684-.497h-1.894v14.93l.002-.003ZM93.792 20c1.336 0 2.3-.342 3.198-.747v-2.738c0-.125-.062-.187-.187-.187h-.31c-.404.31-.714.467-.963.56-.714.25-1.802.28-2.33-.28-.249-.28-.434-.685-.434-1.275V7.4h3.013c.435 0 .747-.342.747-.777v-1.96h-3.757V.965l-2.796.623a.765.765 0 0 0-.621.777v2.303h-2.237v2.737h2.237v7.62c0 1.648.31 2.925 1.118 3.763.746.777 2.02 1.212 3.322 1.212Zm-15.249-3.017c-2.484 0-4.378-2.27-4.378-4.82 0-2.55 1.894-4.883 4.378-4.883s4.378 2.27 4.378 4.883c0 2.612-1.894 4.82-4.378 4.82Zm0 2.987c4.875 0 7.888-3.577 7.888-7.807s-3.013-7.87-7.888-7.87-7.888 3.577-7.888 7.87c0 4.292 3.013 7.807 7.888 7.807ZM66.307 20c1.335 0 2.299-.342 3.197-.747v-2.738c0-.125-.062-.187-.187-.187h-.31c-.404.31-.713.467-.963.56-.714.25-1.802.28-2.329-.28-.25-.28-.434-.685-.434-1.275V7.4h3.013c.434 0 .746-.342.746-.777v-1.96h-3.757V.965l-2.796.623a.765.765 0 0 0-.621.777v2.303h-2.237v2.737h2.237v7.62c0 1.648.31 2.925 1.118 3.763.747.777 2.02 1.212 3.323 1.212Zm-15.437-.03c1.925 0 3.602-.622 4.783-1.617 1.305-1.088 1.677-2.675 1.677-4.448v-9.24h-2.67a.731.731 0 0 0-.747.715v8.243c0 1.087-.25 1.927-.806 2.52-.467.56-1.243.84-2.237.84-.993 0-1.77-.28-2.236-.84-.56-.59-.807-1.43-.807-2.52V4.665h-2.67c-.405 0-.747.343-.747.715v8.523c0 1.772.372 3.36 1.677 4.447 1.181.995 2.859 1.618 4.783 1.618v.002Zm-19.782-8.182 1.707-4.54.901-2.583h.25l.869 2.583 1.707 4.54h-5.434ZM0 19.595h14.628c3.075 0 5.93-1.772 7.049-4.602l1.243-3.173H6.305c-1.832 0-3.51 1.15-4.223 2.83L0 19.595Zm24.068 0H28.2l1.74-4.635h7.795l1.708 4.635h4.098L35.716.933h-3.852l-7.796 18.662Z"
+                    ></path>
+                    <path
+                      fill="#FF003D"
+                      d="M4.533 8.678h16.74a4.465 4.465 0 0 0 4.131-2.738L27.546.933H12.888C9.845.933 7.142 2.8 5.901 5.598l-1.365 3.08h-.003Z"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="text-gray-700 text-base"
+                  >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                >
+                <span class="text-gray-700 text-sm ml-1">2,600+ reviews</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="hidden">
+            <div>
+              <span
+                class="font-ukNumberPlate font-charles uppercase text-black text-xl bg-white rounded-[5px] py-2 px-2"
+                >SH18YWA</span
+              >
+              <h2 class="text-5xl font-bold my-4">
+                Toyota Corolla Icon Tech VVT-i
+              </h2>
+
+              <ul class="flex flex-wrap gap-3 items-center mb-6">
+                <li class="text-2xl font-medium">2019</li>
+                <li class="bg-[#242424] h-1 w-1 rounded-full"></li>
+                <li class="text-2xl font-medium">Silver</li>
+                <li class="bg-[#242424] h-1 w-1 rounded-full"></li>
+
+                <li class="text-2xl font-medium">Hatchback</li>
+                <li class="bg-[#242424] h-1 w-1 rounded-full"></li>
+
+                <li class="text-2xl font-medium">Petrol</li>
+                <li class="bg-[#242424] h-1 w-1 rounded-full"></li>
+
+                <li>
+                  <button
+                    type="button"
+                    class="w-fit px-3 py-2 text-black underline text-2xl font-medium flex items-center gap-2 transition whitespace-nowrap"
+                  >
+                    Not your car?
+                  </button>
+                </li>
+              </ul>
+              <button
+                type="button"
+                class="px-4 py-3 rounded-xl bg-black text-white text-md font-semibold flex items-center gap-2 hover:bg-gray-900 transition whitespace-nowrap"
+              >
+                Next
+                <svg
+                  class="w-5 h-5 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 12h14m-7-7l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="hidden">
+            <div class="relative">
+              <div
+                class="font-ukNumberPlate uppercase w-fit text-black text-xl bg-white rounded-lg py-2 px-3 mb-1"
+              >
+                SH18YWA
+              </div>
+              <h3 class="text-3xl font-bold mb-2">BMW 1 Series</h3>
+              <p class="text-base font-medium leading-[20px]">
+                1.5 116d ED Plus Hatchback 5dr Diesel Manual Euro 6 (s/s) (116
+                ps)
+              </p>
+            </div>
+            <div class="flex gap-[8px] flex-wrap items-start text-sm my-4">
+              <!-- EngineCapacityCC -->
+              <div
+                class="gap-2 flex-1 justify-center text-white flex items-center bg-black py-2 px-2 rounded-lg"
+                title="Engine Capacity"
+              >
+                <svg
+                  class="size-5"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.18881 10.5613H6.80635C5.5699 10.5613 4.95168 10.5613 4.68816 10.1537C4.42465 9.74608 4.67573 9.17817 5.1779 8.04236L6.6876 4.62769C7.14417 3.595 7.37246 3.07865 7.81534 2.78932C8.25821 2.5 8.82028 2.5 9.94453 2.5H11.6857C13.0514 2.5 13.7342 2.5 13.9917 2.94613C14.2493 3.39225 13.9105 3.98823 13.2329 5.18019L12.3397 6.75157C12.0029 7.34412 11.8344 7.64041 11.8368 7.88293C11.8399 8.19813 12.0074 8.4885 12.2782 8.6475C12.4865 8.76992 12.8259 8.76992 13.5049 8.76992C14.3631 8.76992 14.7923 8.76992 15.0158 8.9185C15.3061 9.1115 15.4581 9.45683 15.4049 9.80267C15.3639 10.0688 15.0752 10.388 14.4979 11.0264L9.88528 16.1269C8.97928 17.1288 8.52628 17.6297 8.22209 17.4712C7.91789 17.3126 8.06397 16.6518 8.35611 15.3302L8.92845 12.7413C9.15086 11.735 9.26211 11.2318 8.99461 10.8966C8.72711 10.5613 8.21434 10.5613 7.18881 10.5613Z"
+                    stroke="white"
+                    stroke-width="1.25"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <span>1,560</span>
+              </div>
+
+              <!-- Fuel Type-->
+              <div
+                class="gap-2 flex-1 justify-center text-white flex items-center bg-black py-2 px-2 rounded-lg"
+                title="Fuel Type"
+              >
+                <svg
+                  class="size-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  color="#000000"
+                  fill="none"
+                >
+                  <path
+                    d="M10.4626 13L9.06858 14.8124C8.91919 15.0066 9.02626 15.2861 9.26987 15.3378L10.7301 15.6477C10.9899 15.7028 11.0889 16.0122 10.9073 16.2011L9.17773 18"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M4 10H16"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M4 21L4 9C4 6.17157 4 4.75736 4.87868 3.87868C5.75736 3 7.17157 3 10 3C12.8284 3 14.2426 3 15.1213 3.87868C16 4.75736 16 6.17157 16 9L16 21H4Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  ></path>
+                  <path
+                    d="M2 21H18"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M16 14H17.6667C17.9767 14 18.1317 14 18.2588 14.0341C18.6039 14.1265 18.8735 14.3961 18.9659 14.7412C19 14.8683 19 15.0233 19 15.3333V16.5C19 17.3284 19.6716 18 20.5 18C21.3284 18 22 17.3284 22 16.5V10.2111C22 9.60998 22 9.30941 21.9142 9.02598C21.8284 8.74255 21.6616 8.49247 21.3282 7.9923L20.5547 6.83205C20.2082 6.31223 19.6247 6 19 6"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="line-clamp-1">Diesel</span>
+              </div>
+
+              <!-- Transmission -->
+              <div
+                class="gap-2 flex-1 justify-center text-white flex items-center bg-black py-2 px-2 rounded-lg"
+                title="Transmission"
+              >
+                <svg
+                  class="size-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  color="#000000"
+                  fill="none"
+                >
+                  <path
+                    d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  ></path>
+                  <path
+                    d="M18.9181 10.4125C17.9491 10.8367 16.4851 11.218 15.1595 10.7168C13.2638 10 12.2893 10 12 10C11.7107 10 10.7362 10 8.84049 10.7168C7.51492 11.218 6.05092 10.8367 5.08186 10.4125M19 13.2548C16.8546 13.6631 13.6079 14.878 13.5238 19M10.4762 19C10.3921 14.878 7.14544 13.6631 5 13.2548"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M12.008 13L11.999 13"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span>Automatic</span>
+              </div>
+
+              <!-- Mileage -->
+              <div
+                class="gap-2 flex-1 justify-center text-white flex items-center bg-black py-2 px-2 rounded-lg"
+                title="Mileage"
+              >
+                <svg
+                  class="size-5"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_4587_462)">
+                    <mask
+                      id="mask0_4587_462"
+                      style="mask-type: luminance"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="20"
+                      height="20"
+                    >
+                      <path d="M20 0H0V20H20V0Z" fill="white" />
+                    </mask>
+                    <g mask="url(#mask0_4587_462)">
+                      <path
+                        d="M10 0C4.4775 0 0 4.4775 0 10C0 15.5225 4.4775 20 10 20C15.5225 20 20 15.5225 20 10C20 4.4775 15.5225 0 10 0ZM10 18.75C5.175 18.75 1.25 14.825 1.25 10C1.25 5.175 5.175 1.25 10 1.25C14.825 1.25 18.75 5.175 18.75 10C18.75 14.825 14.825 18.75 10 18.75Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M16.5075 6.2875C16.5013 6.275 16.5013 6.2625 16.495 6.25C16.4863 6.235 16.4725 6.2275 16.4625 6.21375C15.1588 3.99625 12.7538 2.5 10 2.5C5.86375 2.5 2.5 5.86375 2.5 10C2.5 11.4625 2.92125 12.88 3.71875 14.1C3.83875 14.2837 4.03875 14.3837 4.2425 14.3837C4.36 14.3837 4.4775 14.3513 4.58375 14.2813C4.8725 14.0925 4.95375 13.705 4.765 13.4162C4.10125 12.4 3.75 11.2188 3.75 10C3.75 6.55375 6.55375 3.75 10 3.75C12.0838 3.75 13.9212 4.785 15.0575 6.35875L11.21 8.58C10.8825 8.3 10.4637 8.125 10 8.125C8.96625 8.125 8.125 8.96625 8.125 10C8.125 11.0338 8.96625 11.875 10 11.875C11.0338 11.875 11.875 11.0338 11.875 10C11.875 9.88375 11.8613 9.77 11.84 9.65875L15.6862 7.43875C16.0412 8.2225 16.25 9.085 16.25 10C16.25 11.2162 15.9 12.395 15.2387 13.4088C15.05 13.6975 15.1325 14.085 15.4212 14.2737C15.7075 14.4612 16.0963 14.3787 16.2863 14.0912C17.08 12.8737 17.5 11.4588 17.5 10C17.5 8.64875 17.1363 7.38375 16.5075 6.2875ZM10 10.625C9.655 10.625 9.375 10.345 9.375 10C9.375 9.655 9.655 9.375 10 9.375C10.345 9.375 10.625 9.655 10.625 10C10.625 10.345 10.345 10.625 10 10.625Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M11.875 15H8.125C7.78 15 7.5 15.28 7.5 15.625C7.5 15.97 7.78 16.25 8.125 16.25H11.875C12.22 16.25 12.5 15.97 12.5 15.625C12.5 15.28 12.22 15 11.875 15Z"
+                        fill="white"
+                      />
+                    </g>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_4587_462">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <span>85,500</span>
+              </div>
+            </div>
+            <div class="grid gap-3 mb-4 grid-cols-2">
+              <div class="col-span-1">
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-black"
+                  >Name*</label
+                >
+                <input
+                  type="text"
+                  name="FullName"
+                  placeholder="Enter your name"
+                  id="name"
+                  class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-[#0ab0db] focus:border-[#0ab0db] block w-full p-2.5 focus-visible:ring-2 focus-visible:ring-[#0ab0db]"
+                  required=""
+                />
+                <span id="nameError" class="text-red-500 text-sm mt-1 hidden"
+                  >This field is required.</span
+                >
+              </div>
+
+              <div class="col-span-1">
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-black"
+                  >Email*</label
+                >
+                <input
+                  type="text"
+                  name="EmailAddress"
+                  placeholder="Enter your email"
+                  id="email"
+                  class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-[#0ab0db] focus:border-[#0ab0db] block w-full p-2.5 focus-visible:ring-2 focus-visible:ring-[#0ab0db]"
+                  required=""
+                />
+                <span id="emailError" class="text-red-500 text-sm mt-1 hidden"
+                  >This field is required.</span
+                >
+              </div>
+
+              <div class="col-span-2">
+                <label
+                  for="phone"
+                  class="block mb-2 text-sm font-medium text-black"
+                  >Phone*</label
+                >
+                <input
+                  type="number"
+                  name="PhoneNumber"
+                  placeholder="Enter your phone number"
+                  id="PhoneNumberAppoinment"
+                  btn-id="submit-apt2"
+                  error-id="PhoneNumberErrorAppoinment"
+                  class="Phone-Number bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-[#0ab0db] focus:border-[#0ab0db] block w-full p-2.5 focus-visible:ring-2 focus-visible:ring-[#0ab0db]"
+                  required=""
+                />
+              </div>
+
+              <!-- New Address Field -->
+              <div class="col-span-2">
+                <label
+                  for="address"
+                  class="block mb-2 text-sm font-medium text-black"
+                  >Address*</label
+                >
+                <input
+                  type="text"
+                  name="Address"
+                  placeholder="Enter your address"
+                  id="address"
+                  class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-[#0ab0db] focus:border-[#0ab0db] block w-full p-2.5 focus-visible:ring-2 focus-visible:ring-[#0ab0db]"
+                  required=""
+                />
+              </div>
+
+              <div class="col-span-2">
+                <label
+                  for="description"
+                  class="block mb-2 text-sm font-medium text-black"
+                  >Message*</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  name="Comments"
+                  class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-[#0ab0db] focus:border-[#0ab0db] block w-full p-2.5 focus-visible:ring-2 focus-visible:ring-[#0ab0db]"
+                  placeholder="Write your message here"
+                ></textarea>
+              </div>
+
+              <!-- Image Upload Section -->
+              <div class="col-span-2">
+                <label class="block mb-2 text-sm font-medium text-black"
+                  >Upload Images</label
+                >
+
+                <!-- Upload Area -->
+                <div
+                  id="uploadArea"
+                  class="border-2 border-dashed border-gray-700 rounded-lg p-6 text-center transition-colors hover:border-blue-500 hover:bg-gray-50"
+                >
+                  <div class="mb-3">📤</div>
+                  <p class="text-sm text-gray-600 mb-2">
+                    Drag and drop images here, or
+                    <label
+                      for="fileInput"
+                      class="text-black hover:underline cursor-pointer font-medium"
+                      >browse</label
+                    >
+                  </p>
+                  <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                  <input
+                    id="fileInput"
+                    type="file"
+                    multiple
+                    accept="image/*"
+                    class="hidden"
+                  />
+                </div>
+
+                <!-- Image Previews -->
+                <div id="imagePreview" class="mt-4 hidden">
+                  <div class="flex items-center justify-between mb-3">
+                    <h4 class="text-sm font-medium text-black">
+                      Uploaded Images (<span id="imageCount">0</span>)
+                    </h4>
+                    <button
+                      class="text-sm font-medium text-red-600 hover:underline"
+                    >
+                      Remove All Images
+                    </button>
+                  </div>
+                  <div
+                    id="imageGrid"
+                    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-end gap-3">
+              <button
+                type="button"
+                class="px-4 py-3 rounded-xl bg-black text-white text-md font-semibold flex items-center gap-2 hover:bg-gray-900 transition whitespace-nowrap"
+              >
+                <svg
+                  class="w-5 h-5 mr-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m12 19-7-7 7-7"></path>
+                  <path d="M19 12H5"></path>
+                </svg>
+                Back
+              </button>
+              <button
+                type="button"
+                class="px-4 py-3 rounded-xl bg-green-600 text-white text-md font-semibold flex items-center gap-2 hover:bg-green-700 transition whitespace-nowrap"
+              >
+                Next
+                <svg
+                  class="w-5 h-5 ml-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="hidden w-full">
+            <div class="flex justify-between mb-5">
+              <div class="relative">
+                <div
+                  class="font-ukNumberPlate uppercase w-fit text-black text-xl bg-white rounded-lg py-2 px-3 mb-1"
+                >
+                  SH18YWA
+                </div>
+                <h3 class="text-3xl font-bold mb-2">BMW 1 Series</h3>
+                <p class="text-base font-medium leading-[20px]">
+                  1.5 116d ED Plus Hatchback 5dr Diesel Manual Euro 6 (s/s) (116
+                  ps)
+                </p>
+              </div>
+              <div class="rounded-lg shadow-sm p-6 bg-black">
+                <!-- Timer -->
+
+                <!-- Price Section -->
+                <div class="text-center">
+                  <p class="text-sm text-white font-medium">
+                    Estimated sale price
+                  </p>
+                  <p class="text-4xl font-bold text-white mt-1">£2,075</p>
+                </div>
+              </div>
+            </div>
+            <!-- Dates -->
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="flex group bg-black shadow-lg dark-shadow rounded-lg mx-1 cursor-pointer justify-center relative background-color-theme schedule-item"
+                data-date="6/30/2025 12:00:00 AM"
+                data-is-today="True"
+                id="'default-selected'"
+              >
+                <span class="flex h-3 w-3 absolute -top-1 -right-1">
+                  <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 group-hover:opacity-100"
+                  ></span>
+                  <span
+                    class="relative inline-flex h-3 w-3 rounded-full bg-emerald-500 shadow-md shadow-emerald-400/40"
+                  ></span>
+                </span>
+                <div class="flex items-center px-4 py-4">
+                  <div
+                    class="text-center schedule_date"
+                    data-date="6/30/2025 12:00:00 AM"
+                  >
+                    <p
+                      class="text-gray-100 text-sm transition-all duration-300"
+                    >
+                      Mon
+                    </p>
+                    <p
+                      class="text-gray-100 mt-3 font-bold transition-all duration-300"
+                    >
+                      30/06
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex group hover:bg-black hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all duration-300 cursor-pointer justify-center background-color-theme-hover schedule-item"
+                data-date="7/1/2025 12:00:00 AM"
+                data-is-today="False"
+              >
+                <div class="flex items-center px-4 py-4">
+                  <div
+                    class="text-center schedule_date"
+                    data-date="7/1/2025 12:00:00 AM"
+                  >
+                    <p
+                      class="text-gray-900 group-hover:text-gray-100 text-sm transition-all duration-300"
+                    >
+                      Tue
+                    </p>
+                    <p
+                      class="text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all duration-300"
+                    >
+                      01/07
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex group hover:bg-black hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all duration-300 cursor-pointer justify-center background-color-theme-hover schedule-item"
+                data-date="7/1/2025 12:00:00 AM"
+                data-is-today="False"
+              >
+                <div class="flex items-center px-4 py-4">
+                  <div
+                    class="text-center schedule_date"
+                    data-date="7/1/2025 12:00:00 AM"
+                  >
+                    <p
+                      class="text-gray-900 group-hover:text-gray-100 text-sm transition-all duration-300"
+                    >
+                      Tue
+                    </p>
+                    <p
+                      class="text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all duration-300"
+                    >
+                      01/07
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex group hover:bg-black hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all duration-300 cursor-pointer justify-center background-color-theme-hover schedule-item"
+                data-date="7/1/2025 12:00:00 AM"
+                data-is-today="False"
+              >
+                <div class="flex items-center px-4 py-4">
+                  <div
+                    class="text-center schedule_date"
+                    data-date="7/1/2025 12:00:00 AM"
+                  >
+                    <p
+                      class="text-gray-900 group-hover:text-gray-100 text-sm transition-all duration-300"
+                    >
+                      Tue
+                    </p>
+                    <p
+                      class="text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all duration-300"
+                    >
+                      01/07
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex group hover:bg-black hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all duration-300 cursor-pointer justify-center background-color-theme-hover schedule-item"
+                data-date="7/1/2025 12:00:00 AM"
+                data-is-today="False"
+              >
+                <div class="flex items-center px-4 py-4">
+                  <div
+                    class="text-center schedule_date"
+                    data-date="7/1/2025 12:00:00 AM"
+                  >
+                    <p
+                      class="text-gray-900 group-hover:text-gray-100 text-sm transition-all duration-300"
+                    >
+                      Tue
+                    </p>
+                    <p
+                      class="text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all duration-300"
+                    >
+                      01/07
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex group hover:bg-black hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all duration-300 cursor-pointer justify-center background-color-theme-hover schedule-item"
+                data-date="7/1/2025 12:00:00 AM"
+                data-is-today="False"
+              >
+                <div class="flex items-center px-4 py-4">
+                  <div
+                    class="text-center schedule_date"
+                    data-date="7/1/2025 12:00:00 AM"
+                  >
+                    <p
+                      class="text-gray-900 group-hover:text-gray-100 text-sm transition-all duration-300"
+                    >
+                      Tue
+                    </p>
+                    <p
+                      class="text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all duration-300"
+                    >
+                      01/07
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex group hover:bg-black hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all duration-300 cursor-pointer justify-center background-color-theme-hover schedule-item"
+                data-date="7/1/2025 12:00:00 AM"
+                data-is-today="False"
+              >
+                <div class="flex items-center px-4 py-4">
+                  <div
+                    class="text-center schedule_date"
+                    data-date="7/1/2025 12:00:00 AM"
+                  >
+                    <p
+                      class="text-gray-900 group-hover:text-gray-100 text-sm transition-all duration-300"
+                    >
+                      Tue
+                    </p>
+                    <p
+                      class="text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all duration-300"
+                    >
+                      01/07
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="text-center font-bold text-lg mb-4">
+                Monday, 30 June 2025
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                <h3
+                  class="font-semibold mb-2 flex items-center justify-center gap-2 sm:block hidden"
+                >
+                  🌅 Morning
+                </h3>
+                <h3
+                  class="font-semibold mb-2 flex items-center justify-center gap-2 sm:block hidden"
+                >
+                  🍽️ Lunch time
+                </h3>
+                <h3
+                  class="font-semibold mb-2 flex items-center justify-center gap-2 sm:block hidden"
+                >
+                  🌤️ Afternoon
+                </h3>
+                <h3
+                  class="font-semibold mb-2 flex items-center justify-center gap-2 sm:block hidden"
+                >
+                  🌙 Evening
+                </h3>
+              </div>
+              <div
+                class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center scrollable-content"
+              >
+                <div>
+                  <h3
+                    class="font-semibold mb-2 flex items-center justify-center gap-2 block sm:hidden"
+                  >
+                    🌅 Morning
+                  </h3>
+                  <div class="space-y-2">
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="time-Monday-0"
+                        value="10:00"
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        id="30-330"
+                        data-schedule-day-id="330"
+                        data-schedule-day-value="10:00"
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        10:00 AM - 06:00 PM
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div>
+                  <h3
+                    class="font-semibold mb-2 flex items-center justify-center gap-2 block sm:hidden"
+                  >
+                    🍽️ Lunch time
+                  </h3>
+                  <div class="space-y-2">
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="dummy-time-Monday-0-🍽️ Lunch time"
+                        value=""
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        12:00 PM - 12:30 PM
+                      </div>
+                    </label>
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="dummy-time-Monday-0-🍽️ Lunch time"
+                        value=""
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        12:30 PM - 01:00 PM
+                      </div>
+                    </label>
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="dummy-time-Monday-0-🍽️ Lunch time"
+                        value=""
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        01:00 PM - 01:30 PM
+                      </div>
+                    </label>
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="dummy-time-Monday-0-🍽️ Lunch time"
+                        value=""
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        01:30 PM - 02:00 PM
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div>
+                  <h3
+                    class="font-semibold mb-2 flex items-center justify-center gap-2 block sm:hidden"
+                  >
+                    🌤️ Afternoon
+                  </h3>
+                  <div class="space-y-2">
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="dummy-time-Monday-0-🌤️ Afternoon"
+                        value=""
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        02:00 PM - 02:30 PM
+                      </div>
+                    </label>
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="dummy-time-Monday-0-🌤️ Afternoon"
+                        value=""
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        02:30 PM - 03:00 PM
+                      </div>
+                    </label>
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="dummy-time-Monday-0-🌤️ Afternoon"
+                        value=""
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        03:00 PM - 03:30 PM
+                      </div>
+                    </label>
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="dummy-time-Monday-0-🌤️ Afternoon"
+                        value=""
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        03:30 PM - 04:00 PM
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div>
+                  <h3
+                    class="font-semibold mb-2 flex items-center justify-center gap-2 block sm:hidden"
+                  >
+                    🌙 Evening
+                  </h3>
+                  <div class="space-y-2">
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="dummy-time-Monday-0-🌙 Evening"
+                        value=""
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        05:00 PM - 05:30 PM
+                      </div>
+                    </label>
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="dummy-time-Monday-0-🌙 Evening"
+                        value=""
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        05:30 PM - 06:00 PM
+                      </div>
+                    </label>
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="dummy-time-Monday-0-🌙 Evening"
+                        value=""
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        06:00 PM - 06:30 PM
+                      </div>
+                    </label>
+                    <label class="block">
+                      <input
+                        type="radio"
+                        name="dummy-time-Monday-0-🌙 Evening"
+                        value=""
+                        class="hidden peer"
+                        disabled=""
+                      />
+
+                      <div
+                        class="schedule_time text-xs font-medium border border-gray-300 px-1 py-2 rounded-md transition cursor-not-allowed text-black bg-gray-100 select-time pointer-events-none"
+                      >
+                        06:30 PM - 07:00 PM
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-end gap-3 mt-5">
+              <button
+                type="button"
+                class="px-4 py-3 rounded-xl bg-black text-white text-md font-semibold flex items-center gap-2 hover:bg-gray-900 transition whitespace-nowrap"
+              >
+                <svg
+                  class="w-5 h-5 mr-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m12 19-7-7 7-7"></path>
+                  <path d="M19 12H5"></path>
+                </svg>
+                Back
+              </button>
+              <button
+                type="button"
+                class="px-4 py-3 rounded-xl bg-green-600 text-white text-md font-semibold flex items-center gap-2 hover:bg-green-700 transition whitespace-nowrap"
+              >
+                Next
+                <svg
+                  class="w-5 h-5 ml-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="block w-full">
+            <div
+              class="flex items-center gap-6 justify-between md:flex-row flex-col"
+            >
+              <div class="w-full md:w-3/5">
+                <div class="flex flex-col items-start justify-center">
+                  <svg
+                    class="mb-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="64"
+                    height="64"
+                    color="#000000"
+                    fill="none"
+                  >
+                    <path
+                      d="M16 2V6M8 2V6"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M21 13V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M3 10H21"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M13 19.5C13 19.5 14.3485 20.0067 15 22C15 22 18.1765 17 21 16"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <h2 class="text-2xl md:text-4xl font-bold mb-4">
+                    Car details submitted successfully. Well done.
+                  </h2>
+                  <p class="text-center text-gray-600 text-xl mb-12">
+                    One of our representatives will contact you shortly.
+                  </p>
+                </div>
+              </div>
+              <div class="w-full md:w-2/5">
+                <div
+                  class="flex flex-col md:flex-row gap-8 justify-center items-start"
+                >
+                  <!-- User Info Card -->
+                  <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-black">
+                      Your Details
+                    </h3>
+                    <div class="mb-2">
+                      <span class="font-semibold text-gray-700">Name:</span>
+                      <span id="summaryName" class="ml-2 text-gray-900"
+                        >John Doe</span
+                      >
+                    </div>
+                    <div class="mb-2">
+                      <span class="font-semibold text-gray-700"
+                        >Phone Number:</span
+                      >
+                      <span id="summaryPhone" class="ml-2 text-gray-900"
+                        >+44 1234 567890</span
+                      >
+                    </div>
+                    <div class="mb-2">
+                      <span class="font-semibold text-gray-700">Email:</span>
+                      <span id="summaryEmail" class="ml-2 text-gray-900"
+                        >john@example.com</span
+                      >
+                    </div>
+                    <div class="mb-2">
+                      <span class="font-semibold text-gray-700">Message:</span>
+                      <span id="summaryMessage" class="ml-2 text-gray-900"
+                        >Looking to sell my car quickly.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img
+          class="sale-right-img absolute -right-56 top-1/2 -translate-y-1/2 w-80 md:w-96 object-contain rounded-3xl z-0"
+          src="./assets/images/right-car-sale.webp"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <script>
+      class ImageUploader {
+        constructor() {
+          this.uploadedImages = [];
+          this.initializeElements();
+          this.attachEventListeners();
+        }
+
+        initializeElements() {
+          this.uploadArea = document.getElementById("uploadArea");
+          this.fileInput = document.getElementById("fileInput");
+          this.imagePreview = document.getElementById("imagePreview");
+          this.imageGrid = document.getElementById("imageGrid");
+          this.imageCount = document.getElementById("imageCount");
+        }
+
+        attachEventListeners() {
+          // File input change
+          this.fileInput.addEventListener("change", (e) => {
+            this.handleFiles(e.target.files);
+          });
+
+          // Drag and drop events
+          this.uploadArea.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            this.uploadArea.classList.add("border-blue-500", "bg-blue-50");
+          });
+
+          this.uploadArea.addEventListener("dragleave", (e) => {
+            e.preventDefault();
+            this.uploadArea.classList.remove("border-blue-500", "bg-blue-50");
+          });
+
+          this.uploadArea.addEventListener("drop", (e) => {
+            e.preventDefault();
+            this.uploadArea.classList.remove("border-blue-500", "bg-blue-50");
+            this.handleFiles(e.dataTransfer.files);
+          });
+
+          // Remove All Images button
+          const removeAllBtn = document.querySelector("#imagePreview button");
+          if (removeAllBtn) {
+            removeAllBtn.addEventListener("click", () => {
+              this.removeAllImages();
+            });
+          }
+
+          // Form submission
+          document
+            .getElementById("carInquiryForm")
+            .addEventListener("submit", (e) => {
+              e.preventDefault();
+              this.handleSubmit();
+            });
+        }
+
+        handleFiles(files) {
+          Array.from(files).forEach((file) => {
+            if (file.type.startsWith("image/")) {
+              const id = Math.random().toString(36).substr(2, 9);
+              const reader = new FileReader();
+
+              reader.onload = (e) => {
+                const imageData = {
+                  id: id,
+                  file: file,
+                  preview: e.target.result,
+                  name: file.name,
+                };
+
+                this.uploadedImages.push(imageData);
+                this.renderImagePreview(imageData);
+                this.updateImageCount();
+              };
+
+              reader.readAsDataURL(file);
+            }
+          });
+        }
+
+        renderImagePreview(imageData) {
+          const imageContainer = document.createElement("div");
+          imageContainer.className = "relative group";
+          imageContainer.setAttribute("data-id", imageData.id);
+
+          imageContainer.innerHTML = `
+                    <div class="aspect-square rounded-lg overflow-hidden bg-gray-100">
+                        <img src="${imageData.preview}" alt="Preview" class="w-full h-full object-cover">
+                    </div>
+                    <button type="button" class="remove-btn absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-3 py-2 shadow-lg hover:bg-red-600 transition-colors opacity-0 group-hover:opacity-100">
+                        ✕
+                    </button>
+                `;
+
+          // Add remove functionality
+          const removeBtn = imageContainer.querySelector(".remove-btn");
+          if (removeBtn) {
+            removeBtn.addEventListener("click", () => {
+              this.removeImage(imageData.id);
+            });
+          }
+
+          this.imageGrid.appendChild(imageContainer);
+          this.imagePreview.classList.remove("hidden");
+        }
+
+        removeImage(id) {
+          // Remove from array
+          this.uploadedImages = this.uploadedImages.filter(
+            (img) => img.id !== id
+          );
+
+          // Remove from DOM
+          const imageElement = document.querySelector(`[data-id="${id}"]`);
+          if (imageElement) {
+            imageElement.remove();
+          }
+
+          this.updateImageCount();
+
+          // Hide preview section and clear grid if no images
+          if (this.uploadedImages.length === 0) {
+            this.imagePreview.classList.add("hidden");
+            this.imageGrid.innerHTML = "";
+          }
+        }
+
+        removeAllImages() {
+          this.uploadedImages = [];
+          this.imageGrid.innerHTML = "";
+          this.updateImageCount();
+          this.imagePreview.classList.add("hidden");
+        }
+
+        updateImageCount() {
+          this.imageCount.textContent = this.uploadedImages.length;
+        }
+
+        handleSubmit() {
+          const formData = new FormData();
+
+          // Add form fields
+          const form = document.getElementById("carInquiryForm");
+          const formElements = form.elements;
+
+          for (let element of formElements) {
+            if (element.name && element.type !== "file") {
+              formData.append(element.name, element.value);
+            }
+          }
+
+          // Add uploaded images
+          this.uploadedImages.forEach((imageData, index) => {
+            formData.append(`image_${index}`, imageData.file);
+          });
+
+          // Here you would typically send the formData to your server
+          console.log("Form submitted with data:", formData);
+          console.log("Uploaded images:", this.uploadedImages);
+
+          alert("Form submitted successfully! Check console for details.");
+        }
+      }
+
+      // Initialize the image uploader when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        new ImageUploader();
+      });
+    </script>
+  </body>
+</html>

@@ -141,6 +141,23 @@ html {
   text-transform: uppercase;
 }
 
+#mileageInput {
+  background-color: #fff;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  color: #404040;
+  font-size: 32px;
+  font-weight: 700;
+  max-width: 300px;
+  padding: 12px 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.font-ukNumberPlate {
+  font-family: "UKNumberPlate";
+}
+
 #regPlateFreeCheck {
   background-color: #efd83e;
   background-image: url(../images/ukRegInput.svg);

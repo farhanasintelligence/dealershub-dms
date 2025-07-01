@@ -1,0 +1,145 @@
+@use "_index.scss" as *;
+@use "sass:math";
+@use "~@THC/styles/core";
+
+@use "~@THC/styles/breakpoints";
+
+.heroExperimentWrapper {
+  &.hideMobileHeroImage [data-hero-image-wrapper] {
+    @include breakpoints.maxTabletMobile {
+      display: none;
+    }
+  }
+
+  &.hasFloatingCar {
+    --hero-filter: none;
+    --y-home-triangle-size: 0;
+
+    background-color: var(--thc-color-primary-yellow);
+    border-radius: core.$space-16;
+
+    [data-hero-arrow] {
+      display: none;
+    }
+
+    [data-hero-image-wrapper] {
+      margin: 0;
+      padding: 0;
+    }
+
+    [data-hero-content-wrapper] > div {
+      clip-path: none;
+    }
+
+    @include breakpoints.minTablet {
+      gap: core.$space-8;
+      grid-template-columns: core.$space * 83 1fr;
+    }
+
+    @include breakpoints.minTabletMobile() {
+      [data-hero-content-wrapper] > div {
+        border-radius: core.$space-16;
+      }
+    }
+  }
+}
+
+.floatingCar {
+  --animation-length: 12s cubic-bezier(0.25, 0.07, 0.54, 1.48);
+  --animation-play-state: running infinite;
+
+  aspect-ratio: 400 / 326;
+  margin: 0 0 0 calc(-1 * var(--hero-inset));
+  position: relative;
+  transform: translateY(#{core.$space-24});
+  width: calc(100% + var(--hero-inset) * 2);
+  z-index: 1;
+
+  > * {
+    background: image-set(
+      url("./sprite.avif") type("image/avif"),
+      url("./sprite.webp") type("image/webp"),
+      url("./sprite.png") type("image/png")
+    );
+    background-size: auto 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    --animation-play-state: paused;
+  }
+
+  @include breakpoints.minTablet {
+    left: 50%;
+    margin: 0;
+    max-width: core.$space * 100;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 180%;
+  }
+
+  .frame1 {
+    animation: smokeMove var(--animation-length) var(--animation-play-state);
+    background-position: 0 0;
+  }
+
+  .frame2 {
+    animation: carMove var(--animation-length) var(--animation-play-state);
+    background-position: 33.33% 0;
+  }
+
+  .frame3 {
+    animation: smoke2Move var(--animation-length) var(--animation-play-state);
+    background-position: 66.666% 0;
+  }
+
+  .frame4 {
+    animation: smoke3Move var(--animation-length) var(--animation-play-state);
+    background-position: 100% 0;
+  }
+}
+
+@keyframes carMove {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(10px, -5px);
+  }
+}
+
+@keyframes smokeMove {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: scale(1.05) translate(0, 5px);
+  }
+}
+
+@keyframes smoke2Move {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: scale(1.05) translate(30px, 5px);
+  }
+}
+
+@keyframes smoke3Move {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(30px, -5px);
+  }
+}
