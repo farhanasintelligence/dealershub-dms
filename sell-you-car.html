@@ -40,10 +40,10 @@
           alt=""
         />
         <div
-          class="min-h-fit max-w-4xl mx-auto flex flex-col justify-center items-center"
+          class="min-h-fit max-w-4xl mx-auto flex flex-col justify-center items-end"
         >
           <!-- Step 1 -->
-          <div class="hidden">
+          <div class="block">
             <div
               class="flex flex-col justify-center items-center z-10 relative"
             >
@@ -168,25 +168,6 @@
                   </button>
                 </li>
               </ul>
-              <button
-                type="button"
-                class="px-4 py-3 rounded-xl bg-black text-white text-md font-semibold flex items-center gap-2 hover:bg-gray-900 transition whitespace-nowrap"
-              >
-                Next
-                <svg
-                  class="w-5 h-5 ml-1"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M5 12h14m-7-7l7 7-7 7"
-                  ></path>
-                </svg>
-              </button>
             </div>
           </div>
 
@@ -504,50 +485,6 @@
                   ></div>
                 </div>
               </div>
-            </div>
-            <div class="flex justify-end gap-3">
-              <button
-                type="button"
-                class="px-4 py-3 rounded-xl bg-black text-white text-md font-semibold flex items-center gap-2 hover:bg-gray-900 transition whitespace-nowrap"
-              >
-                <svg
-                  class="w-5 h-5 mr-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.75"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m12 19-7-7 7-7"></path>
-                  <path d="M19 12H5"></path>
-                </svg>
-                Back
-              </button>
-              <button
-                type="button"
-                class="px-4 py-3 rounded-xl bg-green-600 text-white text-md font-semibold flex items-center gap-2 hover:bg-green-700 transition whitespace-nowrap"
-              >
-                Next
-                <svg
-                  class="w-5 h-5 ml-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.75"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </button>
             </div>
           </div>
 
@@ -1017,55 +954,10 @@
                 </div>
               </div>
             </div>
-
-            <div class="flex justify-end gap-3 mt-5">
-              <button
-                type="button"
-                class="px-4 py-3 rounded-xl bg-black text-white text-md font-semibold flex items-center gap-2 hover:bg-gray-900 transition whitespace-nowrap"
-              >
-                <svg
-                  class="w-5 h-5 mr-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.75"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m12 19-7-7 7-7"></path>
-                  <path d="M19 12H5"></path>
-                </svg>
-                Back
-              </button>
-              <button
-                type="button"
-                class="px-4 py-3 rounded-xl bg-green-600 text-white text-md font-semibold flex items-center gap-2 hover:bg-green-700 transition whitespace-nowrap"
-              >
-                Next
-                <svg
-                  class="w-5 h-5 ml-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.75"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
           </div>
 
           <!-- Step 5 -->
-          <div class="block w-full">
+          <div class="hidden w-full">
             <div
               class="flex items-center gap-6 justify-between md:flex-row flex-col"
             >
@@ -1112,7 +1004,7 @@
                   <h2 class="text-2xl md:text-4xl font-bold mb-4">
                     Car details submitted successfully. Well done.
                   </h2>
-                  <p class="text-center text-gray-600 text-xl mb-12">
+                  <p class="text-gray-600 text-xl mb-12">
                     One of our representatives will contact you shortly.
                   </p>
                 </div>
@@ -1156,6 +1048,56 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- Buttons for navigation -->
+          <div class="flex justify-end gap-3 mt-5" id="navigationButtons">
+            <button
+              id="sellBackButton"
+              type="button"
+              class="px-4 py-3 rounded-xl bg-black text-white text-md font-semibold flex items-center gap-2 hover:bg-gray-900 transition whitespace-nowrap"
+            >
+              <svg
+                class="w-5 h-5 mr-1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m12 19-7-7 7-7"></path>
+                <path d="M19 12H5"></path>
+              </svg>
+              Back
+            </button>
+            <button
+              id="sellNextButton"
+              type="button"
+              class="px-4 py-3 rounded-xl bg-green-600 text-white text-md font-semibold flex items-center gap-2 hover:bg-green-700 transition whitespace-nowrap"
+            >
+              Next
+              <svg
+                class="w-5 h-5 ml-1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </button>
           </div>
         </div>
 
