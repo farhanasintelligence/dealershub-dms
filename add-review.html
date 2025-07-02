@@ -45,10 +45,7 @@
       <div
         class="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-10 w-full max-w-lg relative border border-gray-100"
       >
-        <form
-          x-data="{ rating: 0, profileUrl: '', name: '', review: '' }"
-          @submit.prevent="alert('Review submitted!')"
-        >
+        <form x-data="reviewForm()" @submit.prevent="submitReview">
           <!-- Profile Picture Upload -->
           <div class="flex flex-col items-center mb-6">
             <label for="profilePic" class="relative cursor-pointer group">
@@ -186,19 +183,65 @@
           <!-- Submit Button -->
           <button
             type="submit"
-            class="w-full bg-blue-600 text-white rounded-xl py-3 font-bold text-lg shadow-lg hover:bg-blue-700 transition-all duration-200 tracking-wide"
+            class="w-full bg-blue-600 text-white rounded-xl py-3 font-normal text-base shadow-lg hover:bg-blue-700 transition-all duration-200 tracking-wide"
           >
             Submit Review
           </button>
+          <!-- Success Modal -->
+          <div
+            x-show="showModal"
+            x-cloak
+            x-transition
+            @click.self="showModal = false"
+            class="fixed inset-0 z-50 flex items-center justify-center bg-white"
+          >
+            <div
+              class="flex flex-col items-center justify-center w-full h-full relative"
+            >
+              <button
+                type="button"
+                @click="showModal = false"
+                class="absolute top-6 right-8 text-gray-400 hover:text-gray-600 text-4xl"
+                aria-label="Close"
+              >
+                &times;
+              </button>
+              <div class="mb-6">
+                <span class="text-8xl block animate-bounce">🎉</span>
+              </div>
+              <h2 class="text-3xl font-bold mb-4 text-center text-blue-700">
+                Your review is submitted successfully!
+              </h2>
+              <p class="text-gray-600 text-center text-lg mb-2">
+                Thank you for your feedback.
+              </p>
+            </div>
+          </div>
         </form>
       </div>
     </div>
 
     <script>
       document.addEventListener("alpine:init", () => {
-        Alpine.data("reviewForm", () => ({
-          rating: 5,
-        }));
+        window.reviewForm = function () {
+          return {
+            rating: 5,
+            profileUrl: "",
+            name: "",
+            review: "",
+            showModal: false,
+            submitReview() {
+              this.showModal = true;
+              // Reset form fields after a short delay to allow modal animation
+              setTimeout(() => {
+                this.rating = 5;
+                this.profileUrl = "";
+                this.name = "";
+                this.review = "";
+              }, 300);
+            },
+          };
+        };
       });
     </script>
   </body>
