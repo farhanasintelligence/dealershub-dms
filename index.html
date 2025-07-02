@@ -461,75 +461,75 @@
     <!-- NEW HERO SECTION END -->
 
     <style>
-      /* Floating animations for review cards */
-      @keyframes float-left-1 {
-        0%,
-        100% {
-          transform: translateX(0);
+        /* Floating animations for review cards */
+        @keyframes float-left-1 {
+          0%,
+          100% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(30px);
+          }
         }
-        50% {
-          transform: translateX(30px);
+
+        @keyframes float-left-2 {
+          0%,
+          100% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(40px);
+          }
         }
-      }
 
-      @keyframes float-left-2 {
-        0%,
-        100% {
-          transform: translateX(0);
+        @keyframes float-right-1 {
+          0%,
+          100% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(-30px);
+          }
         }
-        50% {
-          transform: translateX(40px);
+
+        @keyframes float-right-2 {
+          0%,
+          100% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(-40px);
+          }
         }
-      }
 
-      @keyframes float-right-1 {
-        0%,
-        100% {
-          transform: translateX(0);
+        .animate-float-left-1 {
+          animation: float-left-1 6s ease-in-out infinite;
         }
-        50% {
-          transform: translateX(-30px);
+
+        .animate-float-left-2 {
+          animation: float-left-2 8s ease-in-out infinite;
         }
-      }
 
-      @keyframes float-right-2 {
-        0%,
-        100% {
-          transform: translateX(0);
+        .animate-float-right-1 {
+          animation: float-right-1 7s ease-in-out infinite;
         }
-        50% {
-          transform: translateX(-40px);
+
+        .animate-float-right-2 {
+          animation: float-right-2 9s ease-in-out infinite;
         }
-      }
 
-      .animate-float-left-1 {
-        animation: float-left-1 6s ease-in-out infinite;
-      }
+        .hero-review-card {
+          transform: translateY(0);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-      .animate-float-left-2 {
-        animation: float-left-2 8s ease-in-out infinite;
-      }
+        .review-card:hover {
+          transform: translateY(-5px);
+        }
 
-      .animate-float-right-1 {
-        animation: float-right-1 7s ease-in-out infinite;
-      }
-
-      .animate-float-right-2 {
-        animation: float-right-2 9s ease-in-out infinite;
-      }
-
-      .hero-review-card {
-        transform: translateY(0);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .review-card:hover {
-        transform: translateY(-5px);
-      }
-
-      /* For smaller screens, adjust the positioning */
-      @media (max-width: 768px) {
-        .review-card-container {
+        /* For smaller screens, adjust the positioning */
+        @media (max-width: 768px) {
+          .review-card-container {
           position: relative !important;
           margin-bottom: 1rem;
           display: block;

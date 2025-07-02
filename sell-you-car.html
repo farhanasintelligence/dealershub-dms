@@ -40,7 +40,7 @@
           alt=""
         />
         <div
-          class="min-h-fit max-w-4xl mx-auto flex flex-col justify-center items-end"
+          class="min-h-fit max-w-4xl mx-auto flex flex-col justify-center items-center"
         >
           <!-- Step 1 -->
           <div class="block">
@@ -172,7 +172,7 @@
           </div>
 
           <!-- Step 3 -->
-          <div class="hidden">
+          <div class="hidden w-full">
             <div class="relative">
               <div
                 class="font-ukNumberPlate uppercase w-fit text-black text-xl bg-white rounded-lg py-2 px-3 mb-1"
@@ -1123,30 +1123,51 @@
           this.imagePreview = document.getElementById("imagePreview");
           this.imageGrid = document.getElementById("imageGrid");
           this.imageCount = document.getElementById("imageCount");
+
+          // Debugging: Check if elements are found
+          if (
+            !this.uploadArea ||
+            !this.fileInput ||
+            !this.imagePreview ||
+            !this.imageGrid ||
+            !this.imageCount
+          ) {
+            console.error("One or more elements not found:", {
+              uploadArea: this.uploadArea,
+              fileInput: this.fileInput,
+              imagePreview: this.imagePreview,
+              imageGrid: this.imageGrid,
+              imageCount: this.imageCount,
+            });
+          }
         }
 
         attachEventListeners() {
           // File input change
-          this.fileInput.addEventListener("change", (e) => {
-            this.handleFiles(e.target.files);
-          });
+          if (this.fileInput) {
+            this.fileInput.addEventListener("change", (e) => {
+              this.handleFiles(e.target.files);
+            });
+          }
 
           // Drag and drop events
-          this.uploadArea.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            this.uploadArea.classList.add("border-blue-500", "bg-blue-50");
-          });
+          if (this.uploadArea) {
+            this.uploadArea.addEventListener("dragover", (e) => {
+              e.preventDefault();
+              this.uploadArea.classList.add("border-blue-500", "bg-blue-50");
+            });
 
-          this.uploadArea.addEventListener("dragleave", (e) => {
-            e.preventDefault();
-            this.uploadArea.classList.remove("border-blue-500", "bg-blue-50");
-          });
+            this.uploadArea.addEventListener("dragleave", (e) => {
+              e.preventDefault();
+              this.uploadArea.classList.remove("border-blue-500", "bg-blue-50");
+            });
 
-          this.uploadArea.addEventListener("drop", (e) => {
-            e.preventDefault();
-            this.uploadArea.classList.remove("border-blue-500", "bg-blue-50");
-            this.handleFiles(e.dataTransfer.files);
-          });
+            this.uploadArea.addEventListener("drop", (e) => {
+              e.preventDefault();
+              this.uploadArea.classList.remove("border-blue-500", "bg-blue-50");
+              this.handleFiles(e.dataTransfer.files);
+            });
+          }
 
           // Remove All Images button
           const removeAllBtn = document.querySelector("#imagePreview button");
@@ -1157,12 +1178,13 @@
           }
 
           // Form submission
-          document
-            .getElementById("carInquiryForm")
-            .addEventListener("submit", (e) => {
+          const form = document.getElementById("carInquiryForm");
+          if (form) {
+            form.addEventListener("submit", (e) => {
               e.preventDefault();
               this.handleSubmit();
             });
+          }
         }
 
         handleFiles(files) {
@@ -1244,7 +1266,9 @@
         }
 
         updateImageCount() {
-          this.imageCount.textContent = this.uploadedImages.length;
+          if (this.imageCount) {
+            this.imageCount.textContent = this.uploadedImages.length;
+          }
         }
 
         handleSubmit() {
@@ -1273,9 +1297,89 @@
         }
       }
 
-      // Initialize the image uploader when the page loads
+      // Multi-step form logic
       document.addEventListener("DOMContentLoaded", () => {
         new ImageUploader();
+
+        const steps = Array.from(document.querySelectorAll(".min-h-fit > div"));
+        let currentStep = 0;
+
+        function showStep(idx) {
+          steps.forEach((step, i) => {
+            step.classList.toggle("block", i === idx);
+            step.classList.toggle("hidden", i !== idx);
+          });
+          // Hide navigation buttons on step 1 and 5
+          if (idx === 0 || idx === steps.length - 1) {
+            document.getElementById("navigationButtons").style.display = "none";
+          } else {
+            document.getElementById("navigationButtons").style.display = "flex";
+          }
+        }
+
+        // Step 1: Value your car button
+        const valueBtn = document.querySelector('form button[type="submit"]');
+        if (valueBtn) {
+          valueBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            currentStep = 1;
+            showStep(currentStep);
+          });
+        }
+
+        // Step 2: Not your car button
+        const notYourCarBtn = steps[1].querySelector(
+          'button:not([type="submit"])'
+        );
+        if (notYourCarBtn) {
+          notYourCarBtn.addEventListener("click", () => {
+            console.log("Not your car button clicked");
+            currentStep = 0;
+            showStep(currentStep);
+          });
+        } else {
+          console.error("Not your car button not found");
+        }
+
+        // Attach event listeners to navigation buttons after steps are displayed
+        function attachNavigationEventListeners() {
+          const navigationButtons =
+            document.getElementById("navigationButtons");
+          if (navigationButtons) {
+            const backBtn = navigationButtons.querySelector("#sellBackButton");
+            const nextBtn = navigationButtons.querySelector("#sellNextButton");
+
+            if (backBtn) {
+              backBtn.addEventListener("click", () => {
+                console.log("Back button clicked");
+                if (currentStep > 0) {
+                  currentStep--;
+                  showStep(currentStep);
+                }
+              });
+            } else {
+              console.error("Back button not found in navigation");
+            }
+
+            if (nextBtn) {
+              nextBtn.addEventListener("click", () => {
+                console.log(`Next button clicked on step ${currentStep}`);
+                if (currentStep < steps.length - 1) {
+                  currentStep++;
+                  showStep(currentStep);
+                }
+              });
+            } else {
+              console.error("Next button not found in navigation");
+            }
+          } else {
+            console.error("Navigation buttons not found");
+          }
+        }
+
+        // Initial state
+        showStep(currentStep);
+        attachNavigationEventListeners();
       });
     </script>
   </body>
